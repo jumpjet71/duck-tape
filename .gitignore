@@ -1,0 +1,17 @@
+.DS_Store
+.gradle/
+out/
+bin/
+dist/
+build/
+target/
+.classpath
+.project
+.settings/
+.springBeans
+.idea
+*.iml
+*.ipr
+*.iws
+node_modules/
+npm-debug.log
