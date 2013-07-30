@@ -1,0 +1,35 @@
+
+apply plugin: "idea"
+apply plugin: "saga"
+
+project.version = "0.1"
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        def sagaVersion = "1.4.2"
+
+        classpath "com.github.timurstrekalov:gradle-saga-plugin:$sagaVersion"
+    }
+}
+
+saga {
+    baseDir = 'src/test/webapp/'
+    outputDir = new File('build/coverage')
+    includes = '**/index.html'
+
+    noInstrumentPatterns = ['.*/components/.*']
+
+    sourcesToPreload = 'src/main/webapp/javascript/**/*.js'
+    outputStrategy = 'BOTH'
+}
+
+task wrapper(type: Wrapper) {
+    description = "Generate Windows and Linux wrappers for the specified version of Gradle."
+
+    gradleVersion = "1.6"
+}

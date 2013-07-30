@@ -1,0 +1,22 @@
+{
+    "curly": true,
+    "eqnull": true,
+    "eqeqeq": true,
+    "undef": true,
+    "camelcase": false,
+    "forin": true,
+    "immed": true,
+    "indent": 4,
+    "newcap": true,
+    "nonew": true,
+    "unused": true,
+    "trailing": true,
+    "node": true,
+    "predef": [
+        "_",
+        "alert",
+        "$",
+        "angular",
+        "appModules"
+    ]
+}
