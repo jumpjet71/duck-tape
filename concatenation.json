@@ -1,0 +1,37 @@
+{
+    "cssLibs": {
+        "files": [
+            "bower_components/bootstrap/dist/css/bootstrap.css"
+            , "bower_components/font-awesome/css/font-awesome.css"
+            , "components/font-awesome/css/font-awesome.css"
+            , "bower_components/nvd3/src/nv.d3.css"
+        ]
+    },
+
+    "cssApp": {
+        "themes": {
+            "standard": {
+                "files": [
+                    "src/main/webapp/stylesheets/app/standard/**/*.css"
+                ]
+            }
+        }
+    },
+
+    "jsLibs": {
+        "files": [
+            "bower_components/underscore/underscore.js"
+            , "bower_components/jquery/jquery.js"
+            , "bower_components/angular/angular.js"
+            , "bower_components/bootstrap/dist/js/bootstrap.js"
+            , "bower_components/d3/d3.js"
+            , "components/nvd3/nv.d3.js"
+        ]
+    },
+
+    "jsApp": {
+        "files": [
+            "src/main/webapp/javascript/app/main.js"
+        ]
+    }
+}

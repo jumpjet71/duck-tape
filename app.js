@@ -13,6 +13,7 @@
         http = require('http'),
         path = require('path'),
         passport = require('passport'),
+        globals = require('./src/main/javascript/utils/globals').appGlobals,
         app = express();
 
     // General, boilerplate Express JS configuration that sets up

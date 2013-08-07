@@ -3,20 +3,28 @@
     "eqnull": true,
     "eqeqeq": true,
     "undef": true,
-    "camelcase": false,
+    "camelcase": true,
+    "browser": true,
+    "esnext": true,
+    "bitwise": true,
     "forin": true,
     "immed": true,
+    "regexp": true,
     "indent": 4,
     "newcap": true,
     "nonew": true,
     "unused": true,
     "trailing": true,
     "node": true,
+    "smarttabs": true,
+    "jquery": true,
     "predef": [
         "_",
         "alert",
         "$",
         "angular",
-        "appModules"
+        "appModules",
+        "describe",
+        "it"
     ]
 }
