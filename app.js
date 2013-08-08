@@ -45,8 +45,13 @@
         app.use(passport.initialize());
         app.use(passport.session());
 
+        app.use(require('less-middleware')({ src: srcClient + '/webapp/stylesheets' }));
+
         app.use(app.router);
     });
+
+    // Allow the running mode to be accessed by any node js module.
+    globals.setMode(require('./src/main/javascript/utils/mode-parser.js').modeParser(process));
 
     // Create and run the server instance
     http.createServer(app).listen(app.get('port'), function () {

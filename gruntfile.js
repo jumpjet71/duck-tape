@@ -114,6 +114,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        mochacov: {
+            options: {
+                reporter: 'spec',
+                require: ['should']
+            },
+            all: ['src/test/javascript/**/*.js']
+        },
         mochaTest: {
             test: {
                 options: {
@@ -173,6 +180,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-markdown');
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-mocha-cov');
 
     grunt.registerTask('check', 'Run csslint and jshint on all source files.', ['csslint', 'jshint']);
     grunt.registerTask('docs', 'Generate all source code and project documentation.', ['yuidoc', 'markdown']);

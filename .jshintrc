@@ -25,6 +25,7 @@
         "angular",
         "appModules",
         "describe",
-        "it"
+        "it",
+        "afterEach"
     ]
 }

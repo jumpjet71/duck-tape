@@ -29,18 +29,20 @@
         "grunt-mocha": "0.3.3",
         "grunt-markdown": "0.2.0",
         "grunt-mocha-test": "0.4.0",
+        "grunt-mocha-cov": "0.0.7",
         "chai": "1.6.0",
         "mocha": "1.10.0",
         "mockery": "1.4.0"
     },
     "dependencies": {
-        "express": "3.2.6",
-        "jade": "0.31.1",
+        "express": "3.3.4",
+        "jade": "0.34.1",
+        "less-middleware": "0.1.12",
         "passport": "0.1.17",
         "passport-local": "0.1.6",
-        "connect": "2.8.0",
+        "connect": "2.8.4",
         "connect-flash": "0.1.1",
-        "underscore": "1.4.4"
+        "underscore": "1.5.1"
     },
     "engines": {
         "node": ">=0.10.0",
