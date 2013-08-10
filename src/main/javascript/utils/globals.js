@@ -4,7 +4,7 @@
  * The number of global variables should never be very large.
  *
  * @class globals
- * @module javascript.utils.globals
+ * @module javascript.utils
  *
  */
 exports.appGlobals = (function () {
