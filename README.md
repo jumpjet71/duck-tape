@@ -16,5 +16,23 @@ The "glue code" libraries being used:
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
 * [Chai](http://chaijs.com/) for JS unit test asserting.
 
+## Installing The Duck Tape Project
+
+The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npmjs.org/). Make sure that both are
+installed on the target system.
+
+### Installing packages and dependencies
+
+To install packages:
+
+	# Install grunt build tool CLI globally
+	npm install grunt-cli -g
+	# Install bower client js package manager
+	npm install bower -g
+	# Install the client JS dependencies listed in the current directory's bower.json
+	bower install
+	# Install the server JS dependencies listed in the current directory's package.json
+	npm install
+
 ## License
 Copyright 2012 Teloslogic, under the [MIT License](LICENSE).
