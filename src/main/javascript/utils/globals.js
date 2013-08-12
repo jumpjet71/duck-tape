@@ -1,7 +1,5 @@
 /**
- * Storage for a small number of application global variables
- * to be used with application running modes of 'test', 'dev', and 'prod'.
- * The number of global variables should never be very large.
+ * Storage for a small number of application scoped name value pairs.
  *
  * @class globals
  * @module javascript.utils
