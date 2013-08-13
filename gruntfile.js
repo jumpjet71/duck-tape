@@ -135,8 +135,6 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            // grunt will run the "last" scoped task by default, so
-            // don't move this before tests.
             main: {
                 files: [
                     'src/main/webapp/javascript/app/**/*.js',

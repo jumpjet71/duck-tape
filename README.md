@@ -18,20 +18,30 @@ The "glue code" libraries being used:
 
 ## Installing The Duck Tape Project
 
-The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npmjs.org/). Make sure that both are
-installed on the target system.
+The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npmjs.org/).
 
-### Installing packages and dependencies
+### Installing project runtime
 
-To install packages:
+1) Install [Node JS](http://nodejs.org/) with NPM. 
 
-	# Install grunt build tool CLI globally
+### Installing project dependencies
+
+From the current project directory, run the following commands:
+
+1) Install the grunt CLI
+
 	npm install grunt-cli -g
-	# Install bower client js package manager
+
+2) Install bower client JS package manager
+
 	npm install bower -g
-	# Install the client JS dependencies listed in the current directory's bower.json
+
+3) Install the client JS dependencies listed in the current directory's bower.json
+
 	bower install
-	# Install the server JS dependencies listed in the current directory's package.json
+
+4) Install the server JS dependencies listed in the current directory's package.json
+
 	npm install
 
 ## License
