@@ -3,6 +3,7 @@
 A User Interface Components As-A-Service Experiment.
 
 ## The Tech
+
 The "glue code" libraries being used:
 
 * [Node JS](http://nodejs.org/) for HTTP serving and server side javascript moduling.
@@ -20,9 +21,11 @@ The "glue code" libraries being used:
 
 The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npmjs.org/).
 
-### Installing project runtime
+### Installing project runtime tools
 
-1) Install [Node JS](http://nodejs.org/) with NPM. 
+1) Install [Node JS](http://nodejs.org/).
+
+2) Install [Git](http://git-scm.com/). 
 
 ### Installing project dependencies
 
@@ -34,8 +37,7 @@ From the current project directory, run the following commands:
 
 2) Install bower client JS package manager
 
-	npm install bower -g
-
+	npm install bower -g 
 3) Install the client JS dependencies listed in the current directory's bower.json
 
 	bower install
