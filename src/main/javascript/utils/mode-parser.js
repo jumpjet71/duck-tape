@@ -12,6 +12,7 @@
  * @param {Object} process The node js process instance
  */
 exports.modeParser = function (process) {
+    'use strict';
 
     var mode = process.env.NODE_JS_MODE || 'test',
         testExp = /test/,

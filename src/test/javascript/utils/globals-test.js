@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
 
     var expect = require('chai').expect,
         globals = require('../../../main/javascript/utils/globals').appGlobals;

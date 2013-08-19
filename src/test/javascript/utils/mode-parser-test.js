@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
 
     var expect = require('chai').expect,
         mode = require('../../../main/javascript/utils/mode-parser');

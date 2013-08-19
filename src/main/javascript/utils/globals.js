@@ -6,6 +6,7 @@
  *
  */
 exports.appGlobals = (function () {
+    'use strict';
 
     var mode;
 

@@ -3,6 +3,7 @@
  * @param grunt Grunt JS instance
  */
 module.exports = function (grunt) {
+    'use strict';
 
     var concatenation = grunt.file.readJSON('concatenation.json');
 

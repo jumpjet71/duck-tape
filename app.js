@@ -5,6 +5,7 @@
  * the order of the module loading could result catastrophic exceptions.
  */
 (function () {
+    'use strict';
 
     // Load required modules
     var express = require('express'),

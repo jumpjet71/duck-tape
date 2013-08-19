@@ -37,7 +37,8 @@ From the current project directory, run the following commands:
 
 2) Install bower client JS package manager
 
-	npm install bower -g 
+	npm install bower -g
+
 3) Install the client JS dependencies listed in the current directory's bower.json
 
 	bower install
