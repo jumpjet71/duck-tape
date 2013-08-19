@@ -47,4 +47,4 @@ From the current project directory, run the following commands:
 	npm install
 
 ## License
-Copyright 2012 Teloslogic, under the [MIT License](LICENSE).
+Copyright 2012 under the [MIT License](LICENSE).
