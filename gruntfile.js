@@ -24,19 +24,13 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            img: {
-                files: [
-                    {src: 'src/main/webapp/stylesheets/libs/bootstrap/img/**',
-                        dest: 'dist/main/webapp/stylesheets/libs/img', expand: true, flatten: true}
-                ]
-            },
             fonts: {
                 files: [
-                    {src: 'components/font-awesome/font/**',
+                    {src: 'bower_components/font-awesome/font/**',
                         dest: 'dist/main/webapp/stylesheets/libs/font', expand: true, flatten: true}
                 ]
             },
-            images: {
+            fontsImages: {
                 files: [
                     {src: 'src/main/webapp/images/**',
                         dest: 'dist/main/webapp/images', expand: true, flatten: true}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <!-- Unit test runner styles -->
+        <link rel="stylesheet" href="../../../../bower_components/mocha/mocha.css" />
+        <!-- All third party client libraries -->
+        <script type="text/javascript" src="../../../../dist/main/webapp/javascript/libs/libs.js"></script>
+        <!-- All application client source -->
+        <script type="text/javascript" src="../../../../dist/main/webapp/javascript/app/app.js"></script>
+        <!-- Unit test, mock object and data generation libraries -->
+        <script type="text/javascript" src="../../../../bower_components/sinon/lib/sinon.js"></script>
+        <script type="text/javascript" src="../../../../bower_components/chai/chai.js"></script>
+        <script type="text/javascript" src="../../../../bower_components/mocha/mocha.js"></script>
+        <title>Client Side JS Unit Tests</title>
+    </head>
+    <body>
+        <!-- Required for browser reporter -->
+        <div id="mocha"></div>
+
+        <!-- Temp 'holding' for unit test DOM constructs -- >
+        <div id="temp-test-data"></div>
+
+        <!-- Include your assertion lib of choice -->
+        <script type="text/javascript">
+            // Setup Chai to use the 'Expect' interface
+            var expect = chai.expect;
+        </script>
+
+        <!-- Mocha setup -->
+        <script type="text/javascript">
+            // This will be overridden by mocha-helper if you run with grunt
+            mocha.ui('bdd');
+        </script>
+
+        <!-- Test specification files -->
+
+        <!-- Run Mocha -->
+        <script type="text/javascript">
+            // If tests run in a real browser
+            if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+                mocha.run();
+            }
+        </script>
+    </body>
+</html>

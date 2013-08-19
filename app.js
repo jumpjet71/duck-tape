@@ -39,12 +39,13 @@
         app.use(express.static(path.join(__dirname, buildClient)));
         app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 
-        // Initialize Passport! Also use passport.session() middle ware, to support
-        // persistent login sessions.
+        // Initialize Passport!
+        // Use passport.session() middle ware, to support persistent login sessions.
         app.use(flash());
         app.use(passport.initialize());
         app.use(passport.session());
 
+        // LESS configuration
         app.use(require('less-middleware')({ src: srcClient + '/webapp/stylesheets' }));
 
         app.use(app.router);
