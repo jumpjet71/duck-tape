@@ -31,7 +31,7 @@
 
     "jsApp": {
         "files": [
-            "src/main/webapp/javascript/app/main.js"
+            "src/main/webapp/javascript/main.js"
         ]
     }
 }

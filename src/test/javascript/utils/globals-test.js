@@ -6,7 +6,7 @@
 
     describe('the global variable placeholder:', function () {
 
-        var result = "france";
+        var result = "hope_mode";
 
         describe('setting running mode global with the value "' + result + '"', function () {
 

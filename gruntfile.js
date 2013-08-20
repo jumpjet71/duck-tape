@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            all: ['dist', '.gradle', 'build/docs', 'out']
+            all: ['dist', 'build', 'out']
         },
         cssmin: {
             'dist/main/webapp/stylesheets/libs/css/libs.css': concatenation.cssLibs.files
@@ -147,7 +147,7 @@ module.exports = function (grunt) {
                 version: '<%= pkg.version %>',
                 url: '<%= pkg.homepage %>',
                 options: {
-                    paths: ['src/main/javascript/'],
+                    paths: ['src/main/javascript/', 'src/main/webapp/javascript'],
                     outdir: 'build/docs/'
                 }
             }
