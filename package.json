@@ -1,7 +1,7 @@
 {
     "name": "duck-tape",
     "version": "0.0.1",
-    "description": "UI Components As-A-Service",
+    "description": "A User Interface as a Service (UIaaS) implementation",
     "private": true,
     "author": {
         "name": "Craig Lubin"

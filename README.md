@@ -1,6 +1,7 @@
 # Duck Tape
 
-A User Interface Components As-A-Service Experiment.
+A User Interface as a Service (UIaaS) implementation.
+Duck tape allows developers to utilize pre-built components to create their UI within a web based application.
 
 ## The Tech
 
@@ -29,7 +30,7 @@ The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npm
 
 ### Installing project dependencies
 
-From the current project directory, run the following commands:
+From the current project directory (duck-tape), run the following commands:
 
 1) Install the grunt CLI
 

@@ -2,6 +2,8 @@
  * Configures the application's running mode:
  * test, dev, or prod mode.
  *
+ * NOTE: Also corresponds to the resources.config.running-modes.js module.
+ *
  * Can be set using a system environment variable called "NODE_JS_MODE".
  * This may be overridden as follows:
  *
