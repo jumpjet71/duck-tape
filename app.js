@@ -14,7 +14,7 @@
         http = require('http'),
         path = require('path'),
         passport = require('passport'),
-        globals = require('./src/main/javascript/utils/globals').appGlobals,
+        globals = require('./src/main/javascript/utils/globals-util').appGlobals,
         app = express();
 
     // General, boilerplate Express JS configuration that sets up
@@ -53,7 +53,7 @@
     });
 
     // Allow the running mode to be accessed by any node js module.
-    globals.setMode(require('./src/main/javascript/utils/mode-parser.js').modeParser(process));
+    globals.setMode(require('./src/main/javascript/utils/mode-parser-util.js').modeParser(process));
 
     // Create and run the server instance
     http.createServer(app).listen(app.get('port'), function () {

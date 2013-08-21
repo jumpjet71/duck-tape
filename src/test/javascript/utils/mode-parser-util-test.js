@@ -2,7 +2,7 @@
     'use strict';
 
     var expect = require('chai').expect,
-        mode = require('../../../main/javascript/utils/mode-parser');
+        mode = require('../../../main/javascript/utils/mode-parser-util');
 
     describe('running mode configuration:', function () {
 
@@ -10,7 +10,7 @@
 
             it('should be "test"', function () {
 
-                expect(mode.modeParser(process)).to.equal('test');
+                expect(mode.modeParserUtil(process)).to.equal('test');
             });
         });
 
@@ -20,7 +20,7 @@
 
                 process.env.NODE_JS_MODE = 'dev';
 
-                expect(mode.modeParser(process)).to.equal('dev');
+                expect(mode.modeParserUtil(process)).to.equal('dev');
             });
         });
 
@@ -30,7 +30,7 @@
 
                 process.env.NODE_JS_MODE = 'prod';
 
-                expect(mode.modeParser(process)).to.equal('prod');
+                expect(mode.modeParserUtil(process)).to.equal('prod');
             });
         });
     });

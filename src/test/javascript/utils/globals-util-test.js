@@ -2,7 +2,7 @@
     'use strict';
 
     var expect = require('chai').expect,
-        globals = require('../../../main/javascript/utils/globals').appGlobals;
+        globals = require('../../../main/javascript/utils/globals-util').appGlobalsUtil;
 
     describe('the global variable placeholder:', function () {
 

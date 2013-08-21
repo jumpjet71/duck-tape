@@ -13,7 +13,7 @@
  * @module javascript.utils
  * @param {Object} process The node js process instance
  */
-exports.modeParser = function (process) {
+exports.modeParserUtil = function (process) {
     'use strict';
 
     var mode = process.env.NODE_JS_MODE || 'test',

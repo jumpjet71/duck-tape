@@ -1,10 +1,10 @@
 /**
- * An instantiated object that represents the connection information of a REST endpoint.
+ * An instantiated object that represents the connection information of a REST endpoint factory.
  *
  * @class endpoint
  * @module javascript.utils
  */
-exports.endpoint = (function () {
+exports.endpointUtil = (function () {
     'use strict';
 
     var Connection = function (port, host, path) {

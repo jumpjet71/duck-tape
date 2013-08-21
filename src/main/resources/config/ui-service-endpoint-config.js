@@ -1,5 +1,5 @@
 
-exports.runningModes = (function() {
+exports.uiServiceEndpointConfig = (function() {
     'use strict';
 
     var connection = require('../../javascript/utils/endpoint');

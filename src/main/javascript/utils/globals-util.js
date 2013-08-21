@@ -5,7 +5,7 @@
  * @module javascript.utils
  *
  */
-exports.appGlobals = (function () {
+exports.appGlobalsUtil = (function () {
     'use strict';
 
     var mode;
