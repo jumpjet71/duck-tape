@@ -4,7 +4,7 @@
     var expect = require('chai').expect,
         endpoint = require('../../../main/javascript/utils/endpoint').endpoint;
 
-    describe('the REST endpoint connection:', function () {
+    describe('when using the REST endpoint connection:', function () {
 
         var port = 5050, host = "localhost", path = "/api/v1";
 
