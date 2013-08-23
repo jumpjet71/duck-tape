@@ -2,7 +2,7 @@
     'use strict';
 
     var expect = require('chai').expect,
-        uiServiceConfig = require('../../../main/resources/config/ui-service-config').uiServiceConfig;
+        serviceConfig = require('../../../main/resources/config/service-config').uiServiceConfig;
 
     describe('when using the UI service configuration:', function () {
 
@@ -10,7 +10,7 @@
 
         describe('creating a "test" ui configuration' , function () {
 
-            var configuration = uiServiceConfig.test();
+            var configuration = serviceConfig.test();
 
             it('should return a "test" configuration with port '+ configuration.port, function () {
 

@@ -1,5 +1,5 @@
 
-exports.uiServiceConfig = (function() {
+exports.serviceConfig = (function() {
     'use strict';
 
     var endpointUtil = require('../../javascript/utils/endpoint-util').endpointUtil;

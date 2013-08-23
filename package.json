@@ -15,6 +15,12 @@
     "scripts": {
         "start": "node app"
     },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jumpjet71/duck-tape/blob/master/LICENSE"
+        }
+    ],
     "devDependencies": {
         "grunt": "0.4.1",
         "grunt-contrib-uglify": "0.2.2",
@@ -29,6 +35,8 @@
         "grunt-mocha": "0.4.1",
         "grunt-markdown": "0.2.0",
         "grunt-mocha-test": "0.4.0",
+        "grunt-blanket": "0.0.8",
+        "travis-cov": "0.2.4",
         "chai": "1.6.0",
         "mocha": "1.10.0",
         "mockery": "1.4.0"

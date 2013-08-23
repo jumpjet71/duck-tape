@@ -32,19 +32,15 @@ The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npm
 
 From the current project directory (duck-tape), run the following commands:
 
-1) Install the grunt CLI
+1) Install the grunt CLI and bower CLI
 
-	npm install grunt-cli -g
+	npm install grunt-cli bower -g
 
-2) Install bower client JS package manager
-
-	npm install bower -g
-
-3) Install the client JS dependencies listed in the current directory's bower.json
+2) Install the client JS dependencies listed in the current directory's bower.json
 
 	bower install
 
-4) Install the server JS dependencies listed in the current directory's package.json
+3) Install the server JS dependencies listed in the current directory's package.json
 
 	npm install
 
