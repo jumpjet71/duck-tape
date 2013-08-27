@@ -2,7 +2,7 @@
     'use strict';
 
     var expect = require('chai').expect,
-        mode = require('../../../main/javascript/utils/mode-parser-util');
+        mode = require('../../../main/javascript/utils/mode-parser-utils');
 
     describe('running mode configuration:', function () {
 

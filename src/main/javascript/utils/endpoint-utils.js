@@ -1,7 +1,7 @@
 /**
- * An instantiated object that represents the connection information of a REST endpoint factory.
+ * Allows the creation of a new endpoint object from a configuration instance.
  *
- * @class endpoint
+ * @class endpointUtil
  * @module javascript.utils
  */
 exports.endpointUtil = (function () {
