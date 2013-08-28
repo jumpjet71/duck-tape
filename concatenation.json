@@ -7,7 +7,6 @@
             , "bower_components/nvd3/src/nv.d3.css"
         ]
     },
-
     "cssApp": {
         "themes": {
             "standard": {
@@ -17,7 +16,6 @@
             }
         }
     },
-
     "jsLibs": {
         "files": [
             "bower_components/underscore/underscore.js"
@@ -28,7 +26,11 @@
             , "components/nvd3/nv.d3.js"
         ]
     },
-
+    "jsonLib" :{
+        "files": [
+            "bower_components/json2/json2.js"
+        ]
+    },
     "jsApp": {
         "files": [
             "src/main/webapp/javascript/main.js"

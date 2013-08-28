@@ -12,35 +12,40 @@ The "glue code" libraries being used:
 * [Git](http://git-scm.com/) for source controlling.
 * [Express JS](http://www.expressjs.com/) for javascript web application structuring.
 * [Jade](http://www.jade-lang.com/) for server side templating.
-* [Angular JS](http://angularjs.org/) for client MVCing.
+* [Angular JS](http://angularjs.org/) for client side MVCing.
 * [Bootstrap](http://twitter.github.com/bootstrap/) for client side web developing.
-* [Grunt JS](http://www.gruntjs.com/) for server and client JS building and tasking.
+* [Grunt](http://www.gruntjs.com/) for server and client JS building and tasking.
+* [Bower](http://bower.io/) for web package managing.
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
-* [Chai](http://chaijs.com/) for JS unit test asserting.
+* [Chai](http://chaijs.com/) for unit test asserting.
 
-## Installing The Duck Tape Project
+## Installing Project
 
 The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npmjs.org/).
 
-### Installing project runtime tools
+### Prerequisite Instillation
 
 1) Install [Node JS](http://nodejs.org/).
 
-2) Install [Git](http://git-scm.com/). 
+2) Install [Git](http://git-scm.com/).
 
-### Installing project dependencies
+3) Clone the 'duck-tape' repository:
 
-From the current project directory (duck-tape), run the following commands:
+    git clone git://192.168.0.34/exports/duck-tape.git
 
-1) Install the grunt CLI and bower CLI
+### Quick First Time Project Setup
+
+From the `duck-tape` project directory , run the following commands:
+
+1) Install the [Grunt CLI](https://github.com/gruntjs/grunt-cli) and the [Bower CLI](http://sindresorhus.com/bower-components/) dependencies:
 
 	npm install grunt-cli bower -g
 
-2) Install the client JS dependencies listed in the current directory's bower.json
+2) Install all of the client JS dependencies:
 
 	bower install
 
-3) Install the server JS dependencies listed in the current directory's package.json
+3) Install all of the server JS dependencies:
 
 	npm install
 

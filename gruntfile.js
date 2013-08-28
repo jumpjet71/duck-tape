@@ -43,6 +43,10 @@ module.exports = function (grunt) {
                 src: concatenation.jsLibs.files,
                 dest: 'dist/main/webapp/javascript/libs/libs.js'
             },
+            jsonLib: {
+                src : concatenation.jsonLib.files,
+                dest: 'dist/main/webapp/javascript/libs/json-lib.js'
+            },
             jsApp: {
                 src: concatenation.jsApp.files,
                 dest: 'dist/main/webapp/javascript/app/app.js'
@@ -125,6 +129,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'dist/main/webapp/javascript/libs/libs.js': '<%= concat.jsLibs.dest %>',
+                    'dist/main/webapp/javascript/jsonLib/json-lib.js': '<%= concat.jsonLib.dest %>',
                     'dist/main/webapp/javascript/app/app.js': '<%= concat.jsApp.dest %>'
                 }
             }

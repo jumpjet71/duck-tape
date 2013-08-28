@@ -1,0 +1,23 @@
+//- This template is meant to be extended by other templates.
+//- It is responsible for defining the inclusion of all needed
+//- client side javascript libraries, client side application scripts and client side stylesheets.
+!!! 5
+html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="content-type", content="text/html")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", type="text/css", href="/stylesheets/libs/css/libs.css")
+        link(rel="stylesheet", type="text/css", href="/stylesheets/app/standard/app.css")
+        //if lt IE 8
+                script(type="text/javascript", src="/javascript/libs/json-lib.js")
+        block pageTitle
+        body
+            .container
+                .masthead
+                .content
+                .footer
+                    | Copyright © 2013 S2 Security Corporation. All rights reserved.
+            script(type="text/javascript", src="/javascript/libs/libs.js")
+            script(type="text/javascript", src="/javascript/app/app.js")

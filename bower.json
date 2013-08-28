@@ -7,7 +7,8 @@
         "bootstrap": "3.0.0-rc1",
         "font-awesome": "3.2.1",
         "d3": "3.2.8",
-        "nvd3": "1.0.0-beta"
+        "nvd3": "1.0.0-beta",
+        "json2": "latest"
     },
     "devDependencies": {
         "mocha": "1.12.0",
