@@ -7,13 +7,12 @@
  *
  */
 exports.config = {
-    version: "v1",
     test: {
         // The test UI REST endpoint definition.
         componentEndpoint: {
             port: 9090,
             host: "localhost",
-            path: "/"+ this.version+ "/api"
+            path: "/v1/api"
         }
     }
 };

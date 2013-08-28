@@ -114,7 +114,7 @@ module.exports = function (grunt) {
                 options: {
                     reporter: 'spec'
                 },
-                src: ['src/test/javascript/**/*.js']
+                src: ['src/test/javascript/**/*.js', 'src/test/resources/**/*.js']
             }
         },
         uglify: {

@@ -10,7 +10,7 @@
 
         describe('creating a "test" ui configuration' , function () {
 
-            var configuration = config.test;
+            var configuration = config.test.componentEndpoint;
 
             it('should return a "test" configuration with port '+ configuration.port, function () {
 
