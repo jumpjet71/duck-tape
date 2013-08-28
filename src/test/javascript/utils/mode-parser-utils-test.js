@@ -10,7 +10,7 @@
 
             it('should be "test"', function () {
 
-                expect(mode.modeParserUtil(process)).to.equal('test');
+                expect(mode.modeParserUtils(process)).to.equal('test');
             });
         });
 
@@ -20,7 +20,7 @@
 
                 process.env.NODE_JS_MODE = 'dev';
 
-                expect(mode.modeParserUtil(process)).to.equal('dev');
+                expect(mode.modeParserUtils(process)).to.equal('dev');
             });
         });
 
@@ -30,7 +30,7 @@
 
                 process.env.NODE_JS_MODE = 'prod';
 
-                expect(mode.modeParserUtil(process)).to.equal('prod');
+                expect(mode.modeParserUtils(process)).to.equal('prod');
             });
         });
     });

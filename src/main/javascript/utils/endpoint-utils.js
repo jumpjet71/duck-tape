@@ -1,10 +1,10 @@
 /**
  * Allows the creation of a new endpoint object from a configuration instance.
  *
- * @class endpointUtil
+ * @class endpointUtils
  * @module javascript.utils
  */
-exports.endpointUtil = (function () {
+exports.endpointUtils = (function () {
     'use strict';
 
     var Connection = function (port, host, path) {

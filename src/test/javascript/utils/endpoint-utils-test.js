@@ -2,7 +2,7 @@
     'use strict';
 
     var expect = require('chai').expect,
-        endpoint = require('../../../main/javascript/utils/endpoint-utils').endpointUtil;
+        endpoint = require('../../../main/javascript/utils/endpoint-utils').endpointUtils;
 
     describe('when using the REST endpoint connection:', function () {
 

@@ -1,11 +1,11 @@
 /**
  * Storage for a small number of application scoped name value pairs.
  *
- * @class globals
+ * @class globalUtils
  * @module javascript.utils
  *
  */
-exports.appGlobalsUtil = (function () {
+exports.globalsUtils = (function () {
     'use strict';
 
     var mode;

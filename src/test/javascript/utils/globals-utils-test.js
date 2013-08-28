@@ -2,11 +2,11 @@
     'use strict';
 
     var expect = require('chai').expect,
-        globals = require('../../../main/javascript/utils/globals-utils').appGlobalsUtil;
+        globals = require('../../../main/javascript/utils/globals-utils').globalsUtils;
 
     describe('the global variable placeholder:', function () {
 
-        var result = "hope_mode";
+        var result = "test-mode";
 
         describe('setting running mode global with the value "' + result + '"', function () {
 
