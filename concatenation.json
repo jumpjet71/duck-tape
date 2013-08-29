@@ -26,9 +26,15 @@
             , "components/nvd3/nv.d3.js"
         ]
     },
-    "jsonLib" :{
+    "angularIELibs" :{
         "files": [
             "bower_components/json2/json2.js"
+        ]
+    },
+    "bootstrapIELibs": {
+        "files": [
+            "bower_components/html5shiv/dist/html5shiv.js",
+            "bower_components/respond/respond.src.js"
         ]
     },
     "jsApp": {

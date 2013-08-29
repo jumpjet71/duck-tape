@@ -43,9 +43,13 @@ module.exports = function (grunt) {
                 src: concatenation.jsLibs.files,
                 dest: 'dist/main/webapp/javascript/libs/libs.js'
             },
-            jsonLib: {
-                src : concatenation.jsonLib.files,
-                dest: 'dist/main/webapp/javascript/libs/json-lib.js'
+            angularIELibs: {
+                src : concatenation.angularIELibs.files,
+                dest: 'dist/main/webapp/javascript/libs/angular-ie-libs.js'
+            },
+            bootstrapIELibs: {
+                src: concatenation.bootstrapIELibs.files,
+                dest: 'dist/main/webapp/javascript/libs/bootstrap-ie-libs.js'
             },
             jsApp: {
                 src: concatenation.jsApp.files,

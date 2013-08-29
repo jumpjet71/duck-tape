@@ -11,7 +11,9 @@ html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
         link(rel="stylesheet", type="text/css", href="/stylesheets/libs/css/libs.css")
         link(rel="stylesheet", type="text/css", href="/stylesheets/app/standard/app.css")
         //if lt IE 8
-                script(type="text/javascript", src="/javascript/libs/json-lib.js")
+            script(type="text/javascript", src="/javascript/libs/angular-ie-libs.js")
+        //if lt IE 9
+            script(type="text/javascript", src="/javascript/libs/bootstrap-ie-libs.js")
         block pageTitle
         body
             .container
