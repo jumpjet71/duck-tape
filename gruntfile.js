@@ -176,8 +176,8 @@ module.exports = function (grunt) {
     grunt.registerTask('docs', 'Generate all source code and project documentation.', ['yuidoc', 'markdown']);
     grunt.registerTask('dist', 'Build development distribution.', ['concat', 'copy']);
     grunt.registerTask('minify', 'Minimize all CSS and JS source code in the distribution directory', ['cssmin', 'uglify']);
-    grunt.registerTask('runTests', 'Run all server JS and client JS unit tests.', ['dist', 'check', 'mocha', 'mochaTest']);
-    grunt.registerTask('build', 'Build development distribution and run all unit tests.', ['runTests', 'docs']);
+    grunt.registerTask('run-tests', 'Run all server JS and client JS unit tests.', ['dist', 'check', 'mocha', 'mochaTest']);
+    grunt.registerTask('build', 'Build development distribution and run all unit tests.', ['run-tests', 'docs']);
     grunt.registerTask('deploy', 'Build production distribution and run all unit tests.', ['build', 'minify']);
     grunt.registerTask('default', 'The default grunt target is "build".', ['build']);
 };

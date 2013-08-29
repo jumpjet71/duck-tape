@@ -5,7 +5,7 @@
         routesConfig = require('../../../main/resources/config/routes-config'),
         express = require('express'), app = express();
 
-    describe('page controller configuration:', function () {
+    describe('page router configuration:', function () {
 
         routesConfig.routes(app);
 
