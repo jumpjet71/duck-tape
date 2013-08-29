@@ -1,0 +1,10 @@
+/**
+ * Stylesheet definition for the page footers.
+ */
+
+.footer {
+
+    text-align: center;
+    font-size: 8pt;
+    font-weight: bold;
+}

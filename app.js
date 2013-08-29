@@ -34,8 +34,9 @@
         app.use(express.bodyParser());
         app.use(express.methodOverride());
         app.use(express.cookieParser());
-        app.use(express.session( { secret: 'b051f23bf3944d92b026ed36a1d3e003' } ));
+        app.use(express.session({ secret: 'b051f23bf3944d92b026ed36a1d3e003' }));
         app.use(connect.compress());
+
         app.use(express.static(path.join(__dirname, srcClient)));
         app.use(express.static(path.join(__dirname, buildClient)));
         app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
@@ -46,11 +47,11 @@
         app.use(passport.initialize());
         app.use(passport.session());
 
-        // LESS configuration
-        app.use(require('less-middleware')({ src: srcClient + '/webapp/stylesheets' }));
-
         app.use(app.router);
     });
+
+    // Express JS page route (controller) configuration
+    require('./src/main/resources/config/routes-config').routes(app);
 
     // Allow the running mode to be accessed by any node js module.
     globals.setMode(require('./src/main/javascript/utils/mode-parser-utils').modeParserUtils(process));

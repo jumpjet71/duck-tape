@@ -11,7 +11,7 @@
         "themes": {
             "standard": {
                 "files": [
-                    "src/main/webapp/stylesheets/app/standard/**/*.css"
+                    "src/main/webapp/stylesheets/standard/**/*.css"
                 ]
             }
         }

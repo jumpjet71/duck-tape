@@ -137,8 +137,8 @@ module.exports = function (grunt) {
         watch: {
             main: {
                 files: [
-                    'src/main/webapp/javascript/app/**/*.js',
-                    'src/main/webapp/stylesheets/app/**/*.css',
+                    'src/main/webapp/javascript/**/*.js',
+                    'src/main/webapp/stylesheets/**/*.css',
                     'concatenation.json',
                     'component.json'
                 ],
