@@ -35,7 +35,7 @@
         "grunt-mocha": "0.4.1",
         "grunt-markdown": "0.2.0",
         "grunt-mocha-test": "0.4.0",
-        "mocha-lcov-reporter": "0.0.1",
+        "grunt-karma": "0.6.2",
         "chai": "1.6.0",
         "mocha": "1.10.0",
         "mockery": "1.4.0"

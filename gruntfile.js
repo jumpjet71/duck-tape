@@ -100,7 +100,7 @@ module.exports = function (grunt) {
             // environment check before you run `mocha.run` in your HTML.
             test: {
                 // Test files
-                src: ['src/test/webapp/views/index.html'],
+                src: ['src/test/webapp/views/pages/index.html'],
                 options: {
                     // Pipe output console.log from your JS to grunt.
                     // False by default.

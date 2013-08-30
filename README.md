@@ -7,7 +7,7 @@ Duck tape allows developers to utilize pre-built components to create their UI w
 
 The "glue code" libraries being used:
 
-* [Node JS](http://nodejs.org/) for HTTP serving and server side javascript moduling.
+* [Node JS](http://nodejs.org/) for HTTP serving and server JS moduling.
 * [Node Package Modules](https://npmjs.org/) for server JS package managing.
 * [Git](http://git-scm.com/) for source controlling.
 * [Express JS](http://www.expressjs.com/) for javascript web application structuring.
@@ -29,7 +29,7 @@ The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npm
 
 2) Install [Git](http://git-scm.com/).
 
-3) Clone the 'duck-tape' repository:
+3) Clone the `duck-tape` repository:
 
     git clone git://192.168.0.34/exports/duck-tape.git
 
