@@ -1,9 +1,8 @@
 /**
  *
- * The main index, landing page for the UI component
- * service
+ * The main home landing page for the UI component service.
  *
- * @class index
+ * @class home
  * @module javascript.routes
  *
  * @param {Object} request Express JS request object.

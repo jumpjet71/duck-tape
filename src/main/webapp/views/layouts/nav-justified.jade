@@ -1,0 +1,17 @@
+//- This template is meant to be extended by other templates.
+//- It is responsible for defining the inclusion of all needed
+//- client side javascript libraries, client side application scripts and client side stylesheets.
+!!! 5
+html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
+    head
+        include ../partials/includes/all-header
+        block pageTitle
+        body
+            .container
+                .masthead
+                    block pageHeader
+                .content-justified
+                    block pageContent
+                .footer-justified
+                    block pageFooter
+            include ../partials/includes/all-footer

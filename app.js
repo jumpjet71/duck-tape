@@ -51,7 +51,7 @@
     });
 
     // Express JS page route (controller) configuration
-    require('./src/main/resources/config/routes-config').routes(app);
+    require('./src/main/resources/config/page-routes-config').pageRoutesConfig(app);
 
     // Allow the running mode to be accessed by any node js module.
     globals.setMode(require('./src/main/javascript/utils/mode-parser-utils').modeParserUtils(process));
