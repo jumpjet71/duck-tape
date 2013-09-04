@@ -11,5 +11,5 @@
 exports.index = function (request, response) {
     'use strict';
 
-    response.render('pages/index', { title: 'Home' });
+    response.render('pages/index', { title: 'Duck Tape' });
 };

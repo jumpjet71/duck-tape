@@ -4,3 +4,8 @@
     background-color: transparent;
     padding-top: 25px;
 }
+
+.content-justified .jumbotron {
+    text-align: center;
+    background-color: transparent;
+}

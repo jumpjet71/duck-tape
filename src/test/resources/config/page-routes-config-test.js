@@ -17,19 +17,11 @@
             });
         });
 
-        describe('the windows page controller', function () {
+        describe('the home page controller', function () {
 
-            it('should have the route "/pages/windows"', function () {
+            it('should have the route "/pages/home"', function () {
 
-                expect(app.routes.get[1].path).to.equal('/pages/windows');
-            });
-        });
-
-        describe('the grids page controller', function () {
-
-            it('should have the route "/pages/grids"', function () {
-
-                expect(app.routes.get[2].path).to.equal('/pages/grids');
+                expect(app.routes.get[1].path).to.equal('/pages/home');
             });
         });
 

@@ -1,9 +1,9 @@
 /**
  *
- * The data grid landing page for the UI component
+ * The window container landing page for the UI component
  * service
  *
- * @class grids
+ * @class windows
  * @module javascript.routes
  *
  * @param {Object} request Express JS request object.
@@ -12,5 +12,5 @@
 exports.show = function (request, response) {
     'use strict';
 
-    response.render('pages/grids', { title: 'Grids' });
+    response.render('pages/home', { title: 'Duck Tape' });
 };

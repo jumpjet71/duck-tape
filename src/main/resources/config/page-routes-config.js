@@ -12,13 +12,9 @@ exports.pageRoutesConfig = function (app) {
 
     // Load all of the route controllers
     var controllers = require('../../javascript/routes/index'),
-        windows = require('../../javascript/routes/windows'),
-        grids = require('../../javascript/routes/grids'),
-        charts = require('../../javascript/routes/charts');
+        home = require('../../javascript/routes/home');
 
     // Map URL routes to the appropriate controller display methods.
     app.get('/', controllers.index);
-    app.get('/pages/windows', windows.show);
-    app.get('/pages/grids', grids.show);
-    app.get('/pages/charts', charts.show);
+    app.get('/pages/home', home.show);
 };

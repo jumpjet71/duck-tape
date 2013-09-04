@@ -9,7 +9,9 @@ html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
         body
             .container
                 .masthead
-                    block pageHeader
+                    h3(class="text-muted")
+                        block pageProductName
+                    block pageTopMenu
                 .content-justified
                     block pageContent
                 .footer-justified

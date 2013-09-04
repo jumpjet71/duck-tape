@@ -4,16 +4,32 @@ extends ../layouts/nav-justified
 block pageTitle
     title #{title}
 
-block pageHeader
-    include ../mixins/top-page-nav
-    h3(class="text-muted")
-        | S2 Security
-    +topPageNav("nav nav-justified", "windows")
+block pageProductName
+    | S2 Security
+
+block pageTopMenu
+    ul(class="nav nav-justified")
+        li.active
+            a(href="#") Home
+        li
+            a(href="#") Windows
+        li
+            a(href="#") Data Grids
+        li
+            a(href="#") Forms
+        li
+            a(href="#") Charts
 
 block pageContent
-    h1 #{title}
-        small
-            |  is collection of component containers in different configurations.
+    .jumbotron
+        h1 Component Catalog
+            p.lead
+                | I see a beautiful city and the brilliant people rising from this abyss.
+                | I see the lives, for which I lay down my life. Peaceful, useful, prosperous and happy.
+                | I see that I hold a sanctuary in their hearts and in the hearts of their descendents.
+                | Generations ends. That is the far, far better thing that I do than I have ever done.
+                | That is a far, far better rest that I go to than I have ever known.
+
 
 block pageFooter
     p
