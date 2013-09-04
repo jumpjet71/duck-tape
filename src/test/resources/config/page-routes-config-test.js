@@ -25,6 +25,14 @@
             });
         });
 
+        describe('the windows page controller', function () {
+
+            it('should have the route "/pages/windows"', function () {
+
+                expect(app.routes.get[2].path).to.equal('/pages/windows');
+            });
+        });
+
     });
 
 })();
