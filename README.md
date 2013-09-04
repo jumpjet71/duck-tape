@@ -1,7 +1,9 @@
 # Duck Tape
 
-A User Interface as a Service (UIaaS) implementation.
-Duck tape allows developers to utilize pre-built components to create their UI within a web based application.
+ A User Interface as a Service (UIaaS) that
+ allows developers to utilize pre-built components to create their own UI within an existing web application or conveniently build a new one.
+ Components are implemented as [Angular JS](http://angularjs.org/) [Directives](http://docs.angularjs.org/guide/directive),
+ and component dependencies are delivered as [REST services](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api).
 
 ## The Tech
 

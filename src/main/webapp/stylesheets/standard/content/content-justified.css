@@ -2,10 +2,13 @@
 
 .content-justified {
     background-color: transparent;
-    padding-top: 25px;
 }
 
 .content-justified .jumbotron {
-    text-align: center;
     background-color: transparent;
+    padding: 0;
+}
+
+.content-justified .jumbotron .offset {
+    margin-right: 10px;
 }

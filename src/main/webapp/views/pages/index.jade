@@ -1,4 +1,4 @@
-//- This is the application windows control catalog page.
+//- This is the base page for all pages in the application
 extends ../layouts/nav-justified
 
 block pageTitle
@@ -7,29 +7,31 @@ block pageTitle
 block pageProductName
     | S2 Security
 
-block pageTopMenu
+block pageMainMenu
     ul(class="nav nav-justified")
-        li.active
-            a(href="#") Home
-        li
-            a(href="#") Windows
-        li
-            a(href="#") Data Grids
-        li
-            a(href="#") Forms
-        li
-            a(href="#") Charts
+        include ../partials/menus/page-main-menu-items
 
 block pageContent
     .jumbotron
-        h1 Component Catalog
+        .container
+            h1 Duck Tape
             p.lead
-                | I see a beautiful city and the brilliant people rising from this abyss.
-                | I see the lives, for which I lay down my life. Peaceful, useful, prosperous and happy.
-                | I see that I hold a sanctuary in their hearts and in the hearts of their descendents.
-                | Generations ends. That is the far, far better thing that I do than I have ever done.
-                | That is a far, far better rest that I go to than I have ever known.
-
+                | A User Interface as a Service (UIaaS) that
+                | allows developers to utilize pre-built components to create their own UI within an existing web application or conveniently build a new one.
+                | Components are implemented as <a href="http://angularjs.org/">Angular JS</a> <a href="http://docs.angularjs.org/guide/directive">Directives</a>,
+                | and component dependencies are delivered as <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">REST services</a>.
+            p
+                a(class="btn btn-danger btn-lg offset", href="http://www.egghead.io/")
+                    | Learn More About Angualr JS ...
+                a(class="btn btn-primary btn-lg", href="http://www.drdobbs.com/open-source/twitters-bootstrap-3-polished-and-shined/240160795/")
+                    | Learn More About Bootstrap ...
+            .btn-group
+                a(class="btn btn-success btn-lg")
+                    | Get Started
+                a(class="btn btn-success btn-lg dropdown-toggle", data-toggle="dropdown")
+                    span.caret
+                ul.dropdown-menu
+                    include ../partials/menus/page-main-menu-items
 
 block pageFooter
     p
