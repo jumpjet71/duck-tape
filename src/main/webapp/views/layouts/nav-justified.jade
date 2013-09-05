@@ -1,6 +1,7 @@
 //- This template is meant to be extended by other templates.
 //- It is responsible for defining the inclusion of all needed
 //- client side javascript libraries, client side application scripts and client side stylesheets.
+//- It also defines different navigation structure using Bootstrap.
 !!! 5
 html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
     head
@@ -11,7 +12,8 @@ html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
                 .masthead
                     h3(class="text-muted")
                         block pageProductName
-                    block pageMainMenu
+                    ul(class="nav nav-justified")
+                        block pageMainMenu
                 .content-justified
                     block pageContent
                 .footer-justified
