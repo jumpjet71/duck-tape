@@ -6,7 +6,7 @@
 
     describe('when using the UI service configuration:', function () {
 
-        var port = 9090, host = "localhost", path = "/v1/api";
+        var port = 9090, host = "localhost", path = "/v1/ui";
 
         describe('creating a "test" ui configuration' , function () {
 

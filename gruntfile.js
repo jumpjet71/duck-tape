@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                 options: {
                     csslintrc: '.csslintrc'
                 },
-                src: ['src/main/webapp/stylesheets/app/**/*.css']
+                src: ['src/main/webapp/stylesheets/**/*.css']
             }
         },
         copy: {

@@ -2,5 +2,6 @@
   "adjoining-classes": false,
   "star-property-hack": false,
   "overqualified-elements": false,
-  "unqualified-attributes": false
+  "unqualified-attributes": false,
+  "duplicate-properties": false
 }

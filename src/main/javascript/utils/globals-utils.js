@@ -16,8 +16,6 @@ exports.globalsUtils = (function () {
          * Get the application's running mode.
          *
          * @method getMode
-         *
-         * @returns {*}
          */
         getMode: function () {
 
@@ -28,7 +26,7 @@ exports.globalsUtils = (function () {
          *
          * @method setMode
          *
-         * @param modeObject
+         * @param {Object} modeObject
          */
         setMode: function (modeObject) {
 

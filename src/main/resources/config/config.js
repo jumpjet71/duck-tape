@@ -12,7 +12,7 @@ exports.config = {
         componentEndpoint: {
             port: 9090,
             host: "localhost",
-            path: "/v1/api"
+            path: "/v1/ui"
         }
     }
 };
