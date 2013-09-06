@@ -1,0 +1,22 @@
+//- This template is meant to be extended by other templates.
+//- It is responsible for defining the inclusion of all needed
+//- client side javascript libraries, client side application scripts and client side stylesheets.
+//- It also defines different navigation structure using Bootstrap.
+!!! 5
+html(xmlns:ng="http://angularjs.org" , id="ng-app", ng-app="webApp")
+    head
+        include ../partials/includes/all-header
+        block pageTitle
+        body
+            .container
+                .header-narrow
+                    ul(class="nav nav-pills pull-right")
+                        block pageMainMenu
+                    h3(class="text-muted")
+                        block pageProductName
+                .content-narrow
+                    block pageContent
+                .footer-narrow
+                    block pageFooter
+            include ../partials/includes/all-footer
+

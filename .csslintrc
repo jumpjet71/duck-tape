@@ -3,5 +3,6 @@
   "star-property-hack": false,
   "overqualified-elements": false,
   "unqualified-attributes": false,
-  "duplicate-properties": false
+  "duplicate-properties": false,
+  "qualified-headings": false
 }

@@ -1,5 +1,5 @@
 //- This is the base page for all pages in the application
-extends ../layouts/nav-justified
+extends ../layouts/nav-fixed-top
 
 block pageTitle
     title #{title}
@@ -19,11 +19,11 @@ block pageContent
                 | allows developers to utilize pre-built components to create their own UI within an existing web application or conveniently build a new one.
                 | Components are implemented as <a href="http://angularjs.org/">Angular JS</a> <a href="http://docs.angularjs.org/guide/directive">Directives</a>,
                 | and component dependencies are delivered as <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">REST services</a>.
-            p
+            p.lead
                 a(class="btn btn-danger btn-lg offset", href="http://www.egghead.io/")
-                    | Learn More About Angualr JS »
+                    | Learn More Angualr JS »
                 a(class="btn btn-primary btn-lg", href="http://www.drdobbs.com/open-source/twitters-bootstrap-3-polished-and-shined/240160795/")
-                    | Learn More About Bootstrap »
+                    | Learn More Bootstrap »
             .btn-group
                 a(class="btn btn-success btn-lg")
                     | Get Started
