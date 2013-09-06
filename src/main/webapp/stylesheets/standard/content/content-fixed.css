@@ -1,0 +1,9 @@
+
+.content-fixed {
+
+    margin-top: 65px;
+}
+
+.content-fixed .jumbotron .offset {
+    margin-right: 10px;
+}
