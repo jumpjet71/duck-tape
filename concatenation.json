@@ -1,10 +1,21 @@
 {
     "cssLibs": {
-        "files": [
-            "bower_components/bootstrap/dist/css/bootstrap.css"
-            , "bower_components/font-awesome/css/font-awesome.css"
-            , "bower_components/nvd3/src/nv.d3.css"
-        ]
+        "themes": {
+            "standard": {
+                "files": [
+                    "bower_components/bootstrap/dist/css/bootstrap.css"
+                    , "bower_components/font-awesome/css/font-awesome.css"
+                    , "bower_components/nvd3/src/nv.d3.css"
+                ]
+            },
+            "amelia": {
+                "files": [
+                    "bower_components/bootswatch/amelia/bootstrap.css"
+                    , "bower_components/font-awesome/css/font-awesome.css"
+                    , "bower_components/nvd3/src/nv.d3.css"
+                ]
+            }
+        }
     },
     "cssApp": {
         "themes": {
@@ -26,7 +37,7 @@
             , "bower_components/node-uuid/uuid.js"
         ]
     },
-    "angularIELibs" :{
+    "angularIELibs": {
         "files": [
             "bower_components/json2/json2.js"
         ]
