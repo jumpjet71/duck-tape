@@ -6,7 +6,6 @@ module.exports = function (grunt) {
     'use strict';
 
     var concatenation = grunt.file.readJSON('concatenation.json');
-    var activeTheme = "standard";
 
     grunt.initConfig({
 
@@ -15,7 +14,7 @@ module.exports = function (grunt) {
             all: ['dist', 'build', 'out']
         },
         cssmin: {
-            'dist/main/webapp/stylesheets/libs/css/libs.css': concatenation.cssLibs.themes[activeTheme].files
+            'dist/main/webapp/stylesheets/libs/css/libs.css': concatenation.cssLibs.themes.standard.files
         },
         csslint: {
             strict: {
@@ -57,11 +56,11 @@ module.exports = function (grunt) {
                 dest: 'dist/main/webapp/javascript/app/app.js'
             },
             cssLibs: {
-                src: concatenation.cssLibs.themes[activeTheme].files,
+                src: concatenation.cssLibs.themes.standard.files,
                 dest: 'dist/main/webapp/stylesheets/libs/css/libs.css'
             },
             cssApp: {
-                src: concatenation.cssApp.themes[activeTheme].files,
+                src: concatenation.cssApp.themes.standard.files,
                 dest: 'dist/main/webapp/stylesheets/app/standard/app.css'
             }
         },

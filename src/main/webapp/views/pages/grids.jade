@@ -4,7 +4,7 @@ extends index
 block pageContent
     .row
         .col-lg-3
-            .list-group
+            ul.list-group
                 a(href="#basic-grid", class="list-group-item")
                     | Basic Grid
                 a(href="#paging", class="list-group-item")
@@ -14,8 +14,8 @@ block pageContent
                 a(href="#infinite-grid", class="list-group-item")
                     | Infinite Grid
         .col-lg-9
-            div(class="page-header", style="margin:0;")
-                h1(style="margin:0;") #{title}
+            div(class="page-header margins-to-zero")
+                h1.margins-to-zero #{title}
                 p.lead
                     | Ligthweight grid components.
 

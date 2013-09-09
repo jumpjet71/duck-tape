@@ -1,6 +1,6 @@
 {
     "name":  "duck-tape",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": {
         "underscore": "1.5.1",
         "angular": "1.0.8",

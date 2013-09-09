@@ -1,6 +1,6 @@
 {
     "name": "duck-tape",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A User Interface as a Service (UIaaS) implementation",
     "private": true,
     "author": {

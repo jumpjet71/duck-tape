@@ -4,7 +4,7 @@ extends index
 block pageContent
     .row
         .col-lg-3
-            list-group
+            ul.list-group
                 a(href="#basic-panel", class="list-group-item")
                     | Basic Panel
                 a(href="#panels-with-heading", class="list-group-item")
@@ -12,8 +12,8 @@ block pageContent
                 a(href="#bubble-panel", class="list-group-item")
                     | Bubble Panel
         .col-lg-9
-            div(class="page-header", style="margin:0;")
-                h1(style="margin:0;") #{title}
+            div(class="page-header margins-to-zero")
+                h1.margins-to-zero #{title}
                 p.lead
                     | A set of container, DOM in a box, components.
 
