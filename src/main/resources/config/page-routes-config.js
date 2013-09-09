@@ -10,39 +10,39 @@
 exports.pageRoutesConfig = function (app) {
     'use strict';
 
-    // Load all of the route controllers
-    var controllers = require('../../javascript/routes/index');
-
     // Map URL routes to the appropriate controller display methods.
-    app.get('/', controllers.index);
+    app.get('/', function (request, response) {
+
+        response.render('pages/home', { title: 'Home', pageMainMenuModel: {home: 'active'}});
+    });
 
     app.get('/pages/home', function (request, response) {
 
-        response.render('pages/home', { title: 'Home' });
+        response.render('pages/home', { title: 'Home', pageMainMenuModel: {home: 'active'}});
     });
 
     app.get('/pages/windows', function (request, response) {
 
-        response.render('pages/windows', { title: 'Windows' });
+        response.render('pages/windows', { title: 'Windows', pageMainMenuModel: {windows: 'active'}});
     });
 
     app.get('/pages/grids', function (request, response) {
 
-        response.render('pages/grids', { title: 'Data Grids' });
+        response.render('pages/grids', { title: 'Data Grids', pageMainMenuModel: {grids: 'active'} });
     });
 
     app.get('/pages/forms', function (request, response) {
 
-        response.render('pages/forms', { title: 'Forms' });
+        response.render('pages/forms', { title: 'Forms', pageMainMenuModel: {forms: 'active'} });
     });
 
     app.get('/pages/charts', function (request, response) {
 
-        response.render('pages/charts', { title: 'Charts' });
+        response.render('pages/charts', { title: 'Charts', pageMainMenuModel: {charts: 'active'} });
     });
 
     app.get('/pages/services', function (request, response) {
 
-        response.render('pages/services', { title: 'Windows' });
+        response.render('pages/services', { title: 'Windows', pageMainMenuModel: {home: 'active'} });
     });
 };
