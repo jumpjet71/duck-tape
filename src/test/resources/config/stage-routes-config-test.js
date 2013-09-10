@@ -2,12 +2,12 @@
     'use strict';
 
     var expect = require('chai').expect,
-        routesConfig = require('../../../main/resources/config/page-routes-config'),
+        routesConfig = require('../../../main/resources/config/stage-routes-config'),
         express = require('express'), app = express();
 
     describe('page router configuration:', function () {
 
-        routesConfig.pageRoutesConfig(app);
+        routesConfig.stageRoutesConfig(app);
 
         describe('the index page controller', function () {
 
@@ -19,17 +19,17 @@
 
         describe('the home page controller', function () {
 
-            it('should have the route "/pages/home"', function () {
+            it('should have the route "/stages/home"', function () {
 
-                expect(app.routes.get[1].path).to.equal('/pages/home');
+                expect(app.routes.get[1].path).to.equal('/stages/home');
             });
         });
 
         describe('the windows page controller', function () {
 
-            it('should have the route "/pages/windows"', function () {
+            it('should have the route "/stages/windows"', function () {
 
-                expect(app.routes.get[2].path).to.equal('/pages/windows');
+                expect(app.routes.get[2].path).to.equal('/stages/windows');
             });
         });
 

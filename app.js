@@ -54,8 +54,8 @@
         app.use(app.router);
     });
 
-    // Express JS page route (controller) configuration
-    require('./src/main/resources/config/page-routes-config').pageRoutesConfig(app);
+    // Express JS staging pages route (controller) configuration
+    require('./src/main/resources/config/stage-routes-config').stageRoutesConfig(app);
 
     // Create and run the server instance
     http.createServer(app).listen(app.get('port'), config[globals.getMode()].componentEndpoint.host, function () {
