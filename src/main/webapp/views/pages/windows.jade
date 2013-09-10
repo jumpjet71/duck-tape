@@ -4,7 +4,7 @@ extends index
 block pageContent
     .row
         .col-lg-3
-            ul.list-group
+            ull.list-group
                 a(href="#basic-panel", class="list-group-item")
                     | Basic Panel
                 a(href="#panels-with-heading", class="list-group-item")
@@ -17,12 +17,11 @@ block pageContent
                 p.lead
                     | A set of container, DOM in a box, components.
 
-            h3(id="basic-panel")
-                | Basic Panel
-            p
-                | Monarch, ariel osiris sobek leech silver surfer franklin storm sabretooth kevin
-                | 11 bishop ultron darkseid tigra kool-aid man. Plastique lightning lad willis stryker
-                | blue beetle tinkerer faora violet poison ivy darkseid metamorpho.
+            +runMenu("basic-panel", "Basic Panel")
+                #basic-panel-run
+                #basic-panel-html
+                #basic-panel-css
+
             h3(id="panels-with-heading")
                 | Panels With Heading
             p

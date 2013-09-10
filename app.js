@@ -15,13 +15,17 @@
         path = require('path'),
         passport = require('passport'),
         globals = require('./src/main/javascript/utils/globals-utils').globalsUtils,
+        config = require('./src/main/resources/config/config').config,
         app = express();
+
+    // Allow the running mode to be accessed by any node js module.
+    globals.setMode(require('./src/main/javascript/utils/mode-parser-utils').modeParserUtils(process));
 
     // General, boilerplate Express JS configuration that sets up
     // the locations of client and server source files.
     app.configure(function () {
 
-        var port = 9090,
+        var port = config[globals.getMode()].componentEndpoint.port,
             srcMain = '/src/main',
             buildMain = '/dist/main',
             srcClient = srcMain + '/webapp',
@@ -53,11 +57,8 @@
     // Express JS page route (controller) configuration
     require('./src/main/resources/config/page-routes-config').pageRoutesConfig(app);
 
-    // Allow the running mode to be accessed by any node js module.
-    globals.setMode(require('./src/main/javascript/utils/mode-parser-utils').modeParserUtils(process));
-
     // Create and run the server instance
-    http.createServer(app).listen(app.get('port'), function () {
+    http.createServer(app).listen(app.get('port'), config[globals.getMode()].componentEndpoint.host, function () {
 
         console.log("Express server listening on port " + app.get('port') + ", running in " + globals.getMode() + " mode.");
     });

@@ -43,6 +43,10 @@ module.exports = function (grunt) {
                 src: concatenation.jsLibs.files,
                 dest: 'dist/main/webapp/javascript/libs/libs.js'
             },
+            aceLibs: {
+                src : concatenation.aceLibs.files,
+                dest: 'dist/main/webapp/javascript/libs/ace-libs.js'
+            },
             angularIELibs: {
                 src : concatenation.angularIELibs.files,
                 dest: 'dist/main/webapp/javascript/libs/angular-ie-libs.js'

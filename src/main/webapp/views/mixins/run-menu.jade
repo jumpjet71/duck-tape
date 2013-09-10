@@ -1,0 +1,10 @@
+// - Markup for the staging header and active selection panel
+// - {domId} : The
+
+mixin runMenu(domId, title)
+    h3(id="#{domId}")
+        | #{title}
+    .btn-group
+        button(type="button", class="btn btn-default active") Run
+        button(type="button", class="btn btn-default") HTML
+        button(type="button", class="btn btn-default") CSS

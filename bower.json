@@ -11,7 +11,7 @@
         "json2": "latest",
         "html5shiv": "3.6.2",
         "respond": "1.3.0",
-        "ace": "1.1.1",
+        "ace-builds": "1.1.1",
         "node-uuid": "1.4.1"
     },
     "devDependencies": {
