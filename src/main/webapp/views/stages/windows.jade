@@ -16,11 +16,17 @@ block pageContent
                 h1.margins-to-zero #{title}
                 p.lead
                     | A set of container, DOM in a box, components.
-
-            +runMenu("basic-panel", "Basic Panel")
-                #basic-panel-run
-                #basic-panel-html
-                #basic-panel-css
+            h3(id="basic-panel")
+                | Basic Panel
+            div(class="btn-group run-menu")
+                button(type="button", class="btn btn-default active") Run
+                button(type="button", class="btn btn-default") HTML
+                button(type="button", class="btn btn-default") CSS
+            #basic-panel-run
+                panel
+                    | Panel Content Goes Here
+            #basic-panel-html
+            #basic-panel-css
 
             h3(id="panels-with-heading")
                 | Panels With Heading

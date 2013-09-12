@@ -50,6 +50,7 @@
         "files": [
             "src/main/webapp/javascript/main.js"
             , "src/main/webapp/javascript/utils/**/*.js"
+            , "src/main/webapp/javascript/directives/**/*.js"
         ]
     }
 }
