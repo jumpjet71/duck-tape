@@ -1,5 +1,12 @@
 //- Include all of the application and library javascript.
 
 script(type="text/javascript", src="/javascript/libs/libs.js")
+| <!--[if lte IE 8]>
+| <script type="text/javascript" src="/javascript/libs/angular-ie-libs.js"></script>
+| <![endif]-->
+| <!--[if lte IE 9]>
+| <script type="text/javascript" src="/javascript/libs/bootstrap-ie-libs.js"></script>
+| <![endif]-->
 script(type="text/javascript", src="/javascript/libs/ace-libs.js")
 script(type="text/javascript", src="/javascript/app/app.js")
+
