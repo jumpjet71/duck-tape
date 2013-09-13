@@ -2,7 +2,7 @@
  *
  * Wrapper a fast, simple, RFC 4122 compliant UUID generator
  *
- * @class guidUtils
+ * @class uuidUtils
  * @module webapp.javascript.utils
  *
  */

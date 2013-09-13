@@ -51,6 +51,7 @@
             "src/main/webapp/javascript/main.js"
             , "src/main/webapp/javascript/utils/**/*.js"
             , "src/main/webapp/javascript/directives/**/*.js"
+            , "src/main/webapp/javascript/controllers/**/*.js"
         ]
     }
 }
