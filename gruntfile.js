@@ -137,7 +137,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'dist/main/webapp/javascript/libs/libs.js': '<%= concat.jsLibs.dest %>',
-                    'dist/main/webapp/javascript/jsonLib/json-lib.js': '<%= concat.jsonLib.dest %>',
+                    'dist/main/webapp/javascript/libs/angular-ie-libs.js': '<%= concat.angularIELibs.dest %>',
                     'dist/main/webapp/javascript/app/app.js': '<%= concat.jsApp.dest %>'
                 }
             }
