@@ -1,6 +1,6 @@
-(function (app) {
+(function (directives) {
 
-    app.directive('panel', function () {
+    directives.directive('panel', function () {
         return {
             restrict: 'E',
             transclude: true,
@@ -8,4 +8,4 @@
         }
     });
 
-})(appModules.app);
+})(appModules.directives);

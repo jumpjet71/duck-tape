@@ -4,7 +4,7 @@ extends index
 block pageContent
     .row
         .col-lg-3
-            ull.list-group
+            ul.list-group
                 a(href="#simple-panel", class="list-group-item")
                     | Simple Panel
                 a(href="#panel-with-heading", class="list-group-item")
@@ -17,18 +17,22 @@ block pageContent
                 p.lead
                     | A set of container, DOM in a box, components.
 
-            h3(id="simple-panel", ng-controller="simplePanelController")
+            h3(id="simple-panel")
                 | Basic Panel
             div(class="btn-group run-menu")
                 button(type="button", class="btn btn-default active") Run
                 button(type="button", class="btn btn-default") HTML
-                button(type="button", class="btn btn-default") CSS
+
             #simple-panel-run
                 panel
                     | Panel Content Goes Here
-            div(id="simple-panel-html", class="html-edit")
-                <span>test</span>
-            #simple-panel-css
+            div(id="simple-panel-html", class="highlight")
+                pre
+                    code.html
+                        span.nt
+                            | panel
+                        span.nt
+                            | Panel Content Goes Here
 
             h3(id="panel-with-heading")
                 | Panel With Heading

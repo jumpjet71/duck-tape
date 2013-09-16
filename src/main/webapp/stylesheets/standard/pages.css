@@ -2,6 +2,10 @@
  * CSS elements that are common across all pages.
  */
 
+body {
+    padding-top: 0; /* Account for fixed navbar */
+}
+
 .run-menu {
 
     margin-bottom: 10px;
