@@ -2,16 +2,7 @@
  * CSS elements that are common across all pages.
  */
 
-body {
-    padding-top: 0; /* Account for fixed navbar */
-}
-
-.run-menu {
+.edit-menu {
 
     margin-bottom: 10px;
-}
-
-.html-edit {
-
-    height: 200px;
 }

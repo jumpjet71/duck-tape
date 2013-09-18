@@ -5,8 +5,8 @@ block pageContent
     .row
         .col-lg-3
             ul.list-group
-                a(href="#simple-panel", class="list-group-item")
-                    | Simple Panel
+                a(href="#basic-panel", class="list-group-item")
+                    | Basic Panel
                 a(href="#panel-with-heading", class="list-group-item")
                     | Panel With Heading
                 a(href="#simple-bubble-panel", class="list-group-item")
@@ -17,22 +17,16 @@ block pageContent
                 p.lead
                     | A set of container, DOM in a box, components.
 
-            h3(id="simple-panel")
+            h3(id="basic-panel")
                 | Basic Panel
-            div(class="btn-group run-menu")
-                button(type="button", class="btn btn-default active") Run
-                button(type="button", class="btn btn-default") HTML
 
-            #simple-panel-run
-                panel
+            #basic-panel-run
+                panel(domId="basic-panel-example")
                     | Panel Content Goes Here
-            div(id="simple-panel-html", class="highlight")
+            div(id="basic-panel-edit", class="highlight")
                 pre
-                    code.html
-                        span.nt
-                            | panel
-                        span.nt
-                            | Panel Content Goes Here
+                    .html
+                        | Edit Stuff
 
             h3(id="panel-with-heading")
                 | Panel With Heading
