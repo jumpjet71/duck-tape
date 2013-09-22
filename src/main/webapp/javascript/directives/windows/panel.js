@@ -10,7 +10,7 @@
         return {
             restrict: 'E',
             transclude: true,
-            template: '<div id="{{ basic-panel-example }}" class="panel panel-default"><div class="panel-body" ng-transclude></div></div>'
+            templateUrl: 'panel.html'
         };
     });
 

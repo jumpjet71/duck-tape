@@ -66,6 +66,23 @@ module.exports = function (grunt) {
             cssApp: {
                 src: concatenation.cssApp.themes.standard.files,
                 dest: 'dist/main/webapp/stylesheets/app/standard/app.css'
+            },
+            htmlTemplates: {
+                src: concatenation.htmlTemplates.files,
+                dest: 'dist/main/webapp/templates.html'
+            }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseWhitespace: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.app %>',
+                    src: 'dist/main/webapp/templates.html',
+                    dest: 'dist/main/webapp/templates.html'
+                }]
             }
         },
         jshint: {
@@ -179,6 +196,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-markdown');
     grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask('check', 'Run csslint and jshint on all source files.', ['csslint', 'jshint']);
     grunt.registerTask('docs', 'Generate all source code and project documentation.', ['yuidoc', 'markdown']);

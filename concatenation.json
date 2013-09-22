@@ -53,5 +53,10 @@
             , "src/main/webapp/javascript/directives/**/*.js"
             , "src/main/webapp/javascript/controllers/**/*.js"
         ]
+    },
+    "htmlTemplates": {
+        "files": [
+            "src/main/webapp/views/directives/**/*.html"
+        ]
     }
 }
