@@ -164,6 +164,7 @@ module.exports = function (grunt) {
                 files: [
                     'src/main/webapp/javascript/**/*.js',
                     'src/main/webapp/stylesheets/**/*.css',
+                    'src/main/webapp/views/directives/**/*.html',
                     'concatenation.json',
                     'component.json'
                 ],
