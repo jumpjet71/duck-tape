@@ -5,9 +5,9 @@
  */
 var appModules = {
     utils: angular.module('webApp.utils', []),
-    directives: angular.module('webApp.directives', []),
+    windows: angular.module('webApp.directives.windows', []),
     controllers: angular.module('webApp.controllers', []),
-    app: angular.module('webApp', ['webApp.utils', 'webApp.directives', 'webApp.controllers'])
+    app: angular.module('webApp', ['webApp.utils', 'webApp.directives.windows', 'webApp.controllers'])
 };
 
 /**

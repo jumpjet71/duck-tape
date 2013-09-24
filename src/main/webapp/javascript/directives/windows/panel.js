@@ -1,12 +1,12 @@
 /**
- * Angular JS directive for a bootstrap panel.
+ * Bootstrap panel directive.
  *
  * @class panel
  * @module webapp.javascript.directives.windows
  */
-(function (directives) {
+(function (windows) {
 
-    directives.directive('panel', function () {
+    windows.directive('panel', function () {
         return {
             restrict: 'E',
             transclude: true,
@@ -14,4 +14,4 @@
         };
     });
 
-})(appModules.directives);
+})(appModules.windows);

@@ -1,8 +1,8 @@
 # Duck Tape
 
- A User Interface as a Service (UIaaS) that
- allows developers to utilize pre-built components to create their own UI within an existing web application or conveniently build a new one.
- Components are implemented as [Angular JS](http://angularjs.org/) [Directives](http://docs.angularjs.org/guide/directive),
+ A User Interface as a Service (UIaaS) that allows developers to utilize pre-built components to create their own UI within an
+ existing web application or conveniently build a new one. Components are implemented
+ as [Angular JS](http://angularjs.org/) [Directives](http://docs.angularjs.org/guide/directive),
  and component dependencies are delivered as [REST services](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api).
 
 ## The Tech
@@ -21,13 +21,9 @@ The "glue code" libraries being used:
 * [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
 * [Chai](http://chaijs.com/) for unit test asserting.
 
-## Installing Project
+### Requirements
 
-The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npmjs.org/).
-
-### Prerequisite Instillation
-
-1) Install [Node JS](http://nodejs.org/).
+1) Install [Node JS](http://nodejs.org/) and NPM (should come with Node).
 
 2) Install [Git](http://git-scm.com/).
 
@@ -35,21 +31,21 @@ The Duck Tape project depends on [Node](http://nodejs.org/) and [NPM](http://npm
 
     git clone git://192.168.0.34/exports/duck-tape.git
 
-### Quick First Time Project Setup
+### Project Setup
 
 From the `duck-tape` project directory , run the following commands:
 
-1) Install the [Grunt CLI](https://github.com/gruntjs/grunt-cli) and the [Bower CLI](http://sindresorhus.com/bower-components/) dependencies:
+1) Install [Grunt CLI](https://github.com/gruntjs/grunt-cli) and the [Bower CLI](http://sindresorhus.com/bower-components/) global dependencies:
 
 	npm install grunt-cli bower -g
 
-2) Install all of the client JS dependencies:
+2) Install all of the local client side JavaScript dependencies:
 
 	bower install
 
-3) Install all of the server JS dependencies:
+3) Install all of the local server side JavaScript dependencies:
 
 	npm install
 
 ## License
-Copyright 2012 under the [MIT License](LICENSE).
+Copyright 2013 under the [MIT License](LICENSE).
