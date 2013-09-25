@@ -1,0 +1,78 @@
+pre {
+    border: 1px solid #CCCCCC;
+    line-height: 19px;
+    margin-bottom: 20px;
+    padding: 6px 10px;
+    word-wrap: break-word;
+}
+
+code {
+    border: 1px solid #EAEAEA;
+    font-size: 12px;
+    margin: 0 2px;
+    padding: 0 5px;
+}
+
+pre code {
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+pre, code {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+pre, pre code {
+    font-size: 13px;
+}
+
+pre .comment {
+    color: #999988;
+}
+
+pre .support {
+    color: #0086B3;
+}
+
+pre .tag, pre .tag-name {
+    color: #000080;
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+    font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+    color: #333333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+    color: #009999;
+    font-weight: normal;
+}
+
+pre .entity.class {
+    color: #445588;
+}
+
+pre .entity.id, pre .entity.function {
+    color: #990000;
+}
+
+pre .attribute, pre .variable {
+    color: #008080;
+}
+
+pre .string, pre .support.value {
+    color: #DD1144;
+    font-weight: normal;
+}
+
+pre .regexp {
+    color: #009926;
+}

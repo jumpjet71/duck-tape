@@ -10,7 +10,10 @@
         return {
             restrict: 'E',
             transclude: true,
-            templateUrl: 'panel.html'
+            templateUrl: 'panel.html',
+            link: function (scope, element, attrs) {
+                scope.panelTitle = attrs.panelTitle;
+            }
         };
     });
 
