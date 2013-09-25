@@ -30,11 +30,6 @@
             , "bower_components/node-uuid/uuid.js"
         ]
     },
-    "aceLibs": {
-        "files": [
-            "bower_components/ace-builds/src-noconflict/ace.js"
-        ]
-    },
     "angularIELibs": {
         "files": [
             "bower_components/json2/json2.js"
