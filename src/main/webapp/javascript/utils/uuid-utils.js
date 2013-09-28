@@ -7,7 +7,6 @@
  *
  */
 (function (utils) {
-
     'use strict';
 
     utils.factory('uuidUtils', function () {

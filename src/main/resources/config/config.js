@@ -8,11 +8,11 @@
  */
 exports.config = {
     test: {
-        // The test UI REST endpoint definition.
-        componentEndpoint: {
+        // The test REST endpoint definition.
+        s2RestEndpoint: {
             port: 9090,
             host: "localhost",
-            path: "/v1/ui"
+            path: "/v1"
         }
     }
 };

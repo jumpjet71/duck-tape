@@ -88,6 +88,7 @@ module.exports = function (grunt) {
                 'component.json',
                 'concatination.json',
                 'src/main/webapp/javascript/app/controllers/**/*.js',
+                'src/main/webapp/javascript/app/directives/**/*.js',
                 'src/main/webapp/javascript/app/services/**/*.js',
                 'src/main/webapp/javascript/app/utils/**/*.js',
                 'src/main/javascript/**/*.js',

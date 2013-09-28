@@ -8,12 +8,10 @@
 
     windows.directive('panel', function () {
         return {
-            restrict: 'E',
+            restrict: 'EA',
             transclude: true,
-            templateUrl: 'panel.html',
-            link: function (scope, element, attrs) {
-                scope.panelTitle = attrs.panelTitle;
-            }
+            scope: { panelTitle: '@' },
+            templateUrl: 'panel.html'
         };
     });
 

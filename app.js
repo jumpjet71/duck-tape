@@ -25,7 +25,7 @@
     // the locations of client and server source files.
     app.configure(function () {
 
-        var port = config[globals.getMode()].componentEndpoint.port,
+        var port = config[globals.getMode()].s2RestEndpoint.port,
             srcMain = '/src/main',
             buildMain = '/dist/main',
             srcClient = srcMain + '/webapp',
@@ -57,8 +57,14 @@
     // Express JS staging pages route (controller) configuration
     require('./src/main/resources/config/stage-routes-config').stageRoutesConfig(app);
 
+    // Configure NAS location service endpoints.
+    require('./src/main/resources/config/nas-location-config').configNasLocation(app, globals.getMode());
+
+    // Configure data store.
+    require('./src/main/resources/config/data-store-config').configDataStore();
+
     // Create and run the server instance
-    http.createServer(app).listen(app.get('port'), config[globals.getMode()].componentEndpoint.host, function () {
+    http.createServer(app).listen(app.get('port'), config[globals.getMode()].s2RestEndpoint.host, function () {
 
         console.log("Express server listening on port " + app.get('port') + ", running in " + globals.getMode() + " mode.");
     });
