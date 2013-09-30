@@ -49,6 +49,7 @@
         "connect": "2.8.4",
         "connect-flash": "0.1.1",
         "underscore": "1.5.1",
+        "node-uuid": "1.4.1",
         "nedb": "0.8.9"
     },
     "engines": {

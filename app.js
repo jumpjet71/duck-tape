@@ -54,14 +54,14 @@
         app.use(app.router);
     });
 
+    // Configure data store and store it's instance as global pointer.
+    globals.setDataStore(require('./src/main/resources/config/data-store-config').configDataStore());
+
     // Express JS staging pages route (controller) configuration
     require('./src/main/resources/config/stage-routes-config').stageRoutesConfig(app);
 
     // Configure NAS location service endpoints.
     require('./src/main/resources/config/nas-location-config').configNasLocation(app, globals.getMode());
-
-    // Configure data store.
-    require('./src/main/resources/config/data-store-config').configDataStore();
 
     // Create and run the server instance
     http.createServer(app).listen(app.get('port'), config[globals.getMode()].s2RestEndpoint.host, function () {

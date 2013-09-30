@@ -15,5 +15,6 @@ exports.configNasLocation = function (app, mode) {
 
     var path = config[mode].s2RestEndpoint.path;
 
-    app.get(path + '/csv/nas-location/:id', service.findNasLocationById);
+    app.get(path + '/csv/nas-locations/:id', service.findNasLocationById);
+    app.get(path + '/csv/nas-locations', service.findAllNasLocations);
 };

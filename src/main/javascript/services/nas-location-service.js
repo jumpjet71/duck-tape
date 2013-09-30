@@ -7,6 +7,8 @@
 (function () {
     'use strict';
 
+    var globals = require('../utils/globals-utils').globalsUtils;
+
     /**
      * Find a NAS location resource using it's unique identifier.
      *
@@ -16,9 +18,28 @@
      * @param {Object} response Express JS request response.
      */
     exports.findNasLocationById = function (request, response) {
+        var result = { data: null, httpStatus: null };
+
         response.set('Content-Type', 'application/json');
 
+        globals.getDataStore().nasLocations.findOne({ id: request.params.id }, function (error, nasLocation) {
 
-        response.send({id: 12, computerName: "serverZero", serverIp: "192.11.03.2", shareName: "shared" });
+            result.data = nasLocation;
+            result.httpStatus = response.statusCode;
+            response.send(result);
+        });
+    };
+
+    /**
+     * List all of the NAS location resources.
+     *
+     * @method findAllNasLocations
+     *
+     * @param {Object} request Express JS request object.
+     * @param {Object} response Express JS request response.
+     */
+    exports.findAllNasLocations = function (request, response) {
+
+        response.set('Content-Type', 'application/json');
     };
 })();

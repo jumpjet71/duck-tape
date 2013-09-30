@@ -24,7 +24,7 @@
              * nsecs - (Number between 0-9999) additional time, in 100-nanosecond units
              * ].
              */
-            v1: function (options) {
+            generate: function (options) {
 
                 return uuid.v1(options);
             }
