@@ -1,0 +1,39 @@
+//- This page displays all window container components.
+extends index
+
+block pageContent
+    .row
+        .col-lg-3
+            ul.list-group
+                a(href="#create-nas-location", class="list-group-item")
+                    | Create NAS Location
+        .col-lg-9
+            div(class="page-header margins-to-zero")
+                h1.margins-to-zero #{title}
+                p.lead
+                    | Shared, reusable, application fragments.
+
+            h3(id="create-nas-location")
+                | Create NAS Location
+
+            #create-nas-location
+                .form-horizontal
+                    .form-group
+                        label(for="computerName", class="col-lg-3 control-label")
+                            | Computer Name
+                        .col-lg-9
+                            input(id="computerName", type="text", class="form-control")
+                    .form-group
+                        label(for="serverIp", class="col-lg-3 control-label")
+                            | Server IP
+                        .col-lg-9
+                            input(id="serverIp", type="text", class="form-control")
+                    .form-group
+                        label(for="shareName", class="col-lg-3 control-label")
+                            | Share Name
+                        .col-lg-9
+                            input(id="shareName", type="text", class="form-control")
+                    .form-group
+                        div(class="col-lg-offset-3 col-lg-9")
+                            button(class="btn btn-primary")
+                                |  Submit

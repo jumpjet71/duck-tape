@@ -1,6 +1,12 @@
-
-
-exports.uuidUtils = (function() {
+/**
+ *
+ * Wrapper a fast, simple, RFC 4122 compliant UUID generator
+ *
+ * @class uuidUtils
+ * @module javascript.utils
+ *
+ */
+exports.uuidUtils = (function () {
     'use strict';
 
     var uuid = require('node-uuid');
@@ -20,7 +26,7 @@ exports.uuidUtils = (function() {
          */
         generate: function (options) {
 
-            return uuid.v1(options);
+            return uuid.v4(options);
         }
     };
 

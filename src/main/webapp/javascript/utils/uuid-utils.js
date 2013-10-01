@@ -26,7 +26,7 @@
              */
             generate: function (options) {
 
-                return uuid.v1(options);
+                return uuid.v4(options);
             }
         };
     });

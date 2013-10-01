@@ -7,15 +7,15 @@
 
         describe('the v1 method', function () {
 
-            var uuid = "d9428888-122b-11e1-b85c-61cd3cbb3210";
+            var uuid = "109156be-c4fb-41ea-b1b4-efe1671c5836";
 
             it('should return a UUID of ' + uuid + ' for all four options explicitly set' , function () {
 
                 result = uuidUtils.generate({
-                    msecs: 1321651533573,
-                    nsecs: 5432,
-                    clockseq: 0x385c,
-                    node: [ 0x61, 0xcd, 0x3c, 0xbb, 0x32, 0x10 ]
+                    random: [
+                        0x10, 0x91, 0x56, 0xbe, 0xc4, 0xfb, 0xc1, 0xea,
+                        0x71, 0xb4, 0xef, 0xe1, 0x67, 0x1c, 0x58, 0x36
+                    ]
                 });
 
                 expect(result).to.equal(uuid);

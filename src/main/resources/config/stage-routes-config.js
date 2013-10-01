@@ -41,8 +41,8 @@ exports.stageRoutesConfig = function (app) {
         response.render('stages/charts', { title: 'Charts', pageMainMenuModel: {charts: 'active'} });
     });
 
-    app.get('/stages/services', function (request, response) {
+    app.get('/stages/fragments', function (request, response) {
 
-        response.render('stages/services', { title: 'Windows', pageMainMenuModel: {home: 'active'} });
+        response.render('stages/fragments', { title: 'Fragments', pageMainMenuModel: {fragments: 'active'} });
     });
 };
