@@ -6,19 +6,13 @@ link(rel="shortcut icon", type="image/x-icon", href="/images/favicon.ico")
 link(rel="stylesheet", type="text/css", href="/stylesheets/libs/css/libs.css")
 link(rel="stylesheet", type="text/css", href="/stylesheets/app/standard/app.css")
 | <!--[if lte IE 9]>
-| <script type="text/javascript" src="/javascript/libs/bootstrap-ie-libs.js"></script>
-| <![endif]-->
-| <!--[if lte IE 8]>
-|     <script type="text/javascript">
-|       document.createElement('ng-include');
-|       document.createElement('ng-pluralize');
-|       document.createElement('ng-view');
-|       document.createElement('ng:include');
-|       document.createElement('ng:pluralize');
-|       document.createElement('ng:view');
+|   <script type="text/javascript" src="/javascript/libs/bootstrap-ie-libs.js"></script>
 | <![endif]-->
 | <!--[if lte IE 9]>
-| <script type="text/javascript" src="/javascript/libs/angular-ie-libs.js"></script>
+|   <script type="text/javascript" src="/javascript/libs/angular-ie-libs.js"></script>
+|   <script type="text/javascript">
+|       document.createElement('panel');
+|   </script>
 | <![endif]-->
 include ../../../../../../dist/main/webapp/templates.html
 
