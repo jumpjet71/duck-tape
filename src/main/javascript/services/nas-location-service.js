@@ -19,9 +19,6 @@
      * @param {Object} response Express JS request response.
      */
     exports.findNasLocationById = function (request, response) {
-        var result = { data: null, httpStatus: null };
-
-        response.set('Content-Type', 'application/json');
 
         globals.getDataStore().nasLocations.findOne({ id: request.params.id }, function (error, nasLocation) {
 
