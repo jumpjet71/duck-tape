@@ -12,7 +12,7 @@ exports.config = {
         s2RestEndpoint: {
             port: 9090,
             host: "localhost",
-            path: "/v1"
+            path: "/v1/api"
         }
     }
 };

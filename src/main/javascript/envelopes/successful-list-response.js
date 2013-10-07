@@ -1,5 +1,5 @@
 /**
- * This is the JSON list response that is returned only for 200, and 201 HTTP status code.
+ * This is the JSON list response that is returned only for 200, and 201 HTTP status codes.
  *
  * @class successFullListResponse
  * @module javascript.envelopes

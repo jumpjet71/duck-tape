@@ -10,13 +10,13 @@ exports.paginationCriteria = (function () {
     var Envelope = function (size, sort, order, current, totalCount) {
 
         /**
-         * The total number of available pages using the current size.
+         * The total number of available pages.
          */
-        this.total = null;
+        this.total = (size > 0 ? Math.ceil(totalCount / size) : 1);
         /**
          * The number of items being returned.
          */
-        this.size = size;
+        this.size = (size > 0 ? size : 10);
         /**
          * The name of the property that is being sorted.
          */
@@ -25,11 +25,11 @@ exports.paginationCriteria = (function () {
          * Set descending or ascending array sort order.
          * A value of “true” means ascending order.
          */
-        this.order = order;
+        this.order = (typeof order === 'boolean' ? order : true);
         /**
          * The number of the current page. Is always nonnegative, and equal or less than total.
          */
-        this.current = current;
+        this.current = (current > 0 ? current : 1);
         /**
          * The total number of available elements.
          */
@@ -37,12 +37,11 @@ exports.paginationCriteria = (function () {
         /**
          * Is true if there is a previous page.
          */
-        this.hasPreviousPage = (function () {
-        })();
+        this.hasPreviousPage = (this.current - 1) > 0;
         /**
          * Is true if there is a next page.
          */
-        this.hasNextPage = null;
+        this.hasNextPage = (this.current + 1<= this.total);
     };
 
     return {

@@ -16,6 +16,7 @@
         passport = require('passport'),
         globals = require('./src/main/javascript/utils/globals-utils').globalsUtils,
         config = require('./src/main/resources/config/config').config,
+        errorResponse = require('./src/main/javascript/envelopes/error-response').errorResponse,
         app = express();
 
     // Allow the running mode to be accessed by any node js module.
@@ -52,6 +53,7 @@
         app.use(passport.session());
 
         app.use(app.router);
+
     });
 
     // Configure data store and store it's instance as global pointer.
@@ -63,12 +65,20 @@
     // Configure NAS location service endpoints.
     require('./src/main/resources/config/nas-location-config').configNasLocation(app, globals.getMode());
 
+    // Generic 404 error handling
+    app.use(function (request, response) {
+
+        response.status(404);
+        response.set('Content-Type', 'application/json');
+        response.send(errorResponse.create(404, "The requested resource was not found",
+            "The resource URL is malformed and does not match the location of any resources in the system", null));
+    });
+
     // Create and run the server instance
     http.createServer(app).listen(app.get('port'), config[globals.getMode()].s2RestEndpoint.host, function () {
 
         console.log("Express server listening on port " + app.get('port') + ", running in " + globals.getMode() + " mode.");
     });
-
 })();
 
 
