@@ -16,9 +16,9 @@
             scope.$digest();
         });
 
-        it('has a "panel" css class', function() {
+        it('has a "panel" css class', function () {
 
-           expect(element.hasClass('panel')).to.equal(true);
+            expect(element.hasClass('panel')).to.equal(true);
         });
     });
 })();

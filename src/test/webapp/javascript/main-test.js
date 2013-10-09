@@ -5,7 +5,7 @@
 
         beforeEach(function () {
 
-            this.injector = angular.injector(['ng', 'webApp']);
+            this.injector = angular.injector(['ng', 'ngResource', 'webApp']);
         });
 
         it('should create a valid injector set with the proper defaults', function () {

@@ -5,6 +5,7 @@
  * @module webapp.javascript.directives.windows
  */
 (function (windows) {
+    'use strict';
 
     windows.directive('panel', function () {
         return {

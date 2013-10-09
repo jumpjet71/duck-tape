@@ -85,15 +85,18 @@ module.exports = function (grunt) {
             files: [
                 'app.js',
                 'gruntfile.js',
-                'component.json',
-                'concatination.json',
-                'src/main/webapp/javascript/app/controllers/**/*.js',
-                'src/main/webapp/javascript/app/directives/**/*.js',
-                'src/main/webapp/javascript/app/services/**/*.js',
-                'src/main/webapp/javascript/app/utils/**/*.js',
+                'bower.json',
+                'concatenation.json',
+                'src/main/webapp/javascript/directives/**/*.js',
+                'src/main/webapp/javascript/models/**/*.js',
+                'src/main/webapp/javascript/utils/**/*.js',
+                'src/test/webapp/javascript/directives/**/*.js',
+                'src/test/webapp/javascript/rest-models/**/*.js',
+                'src/test/webapp/javascript/utils/**/*.js',
                 'src/main/javascript/**/*.js',
                 'src/test/javascript/**/*.js',
-                'src/main/resources/**/*.js'
+                'src/main/resources/**/*.js',
+                'src/test/resources/**/*.js'
             ],
             options: {
                 jshintrc: '.jshintrc'
@@ -130,7 +133,7 @@ module.exports = function (grunt) {
                     reporter: 'Spec',
                     // Indicates whether 'mocha.run()' should be executed in
                     // 'bridge.js'. If you include `mocha.run()` in your html spec,
-                    // check if environment is PhantomJS. See example/test/test2.html
+                    // check if environment is PhantomJS.
                     run: true
                 }
             }
