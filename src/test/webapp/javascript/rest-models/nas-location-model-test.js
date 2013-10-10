@@ -3,13 +3,12 @@
 
     describe('the nas location model:', function () {
 
-        var injector, mockHttpBackend;
-        var successfulObjectResponse = {httpStatus: 200, data: {id: 22, computerName: 'HAL9000', serverIp: '192.17.5.20'}};
+        var injector, mockHttpBackend,
+            successfulObjectResponse = {httpStatus: 200, data: {id: 12, computerName: 'HAL9000', serverIp: '192.17.5.20'}};
 
         beforeEach(function () {
 
             injector = angular.injector(['ngMock', 'webApp.restModels']);
-
             mockHttpBackend = injector.get('$httpBackend');
         });
 
@@ -17,11 +16,14 @@
 
             it('should return a valid "nas-location" resource', function () {
 
-                var NasLocationModel = injector.get('NasLocationModel'), nasLocation;
+                var nasLocationModel = injector.get('nasLocationModel');
 
-                mockHttpBackend.expectGET('/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
+                mockHttpBackend.expectGET('/v1/api/csv/nas-locations/12').respond(successfulObjectResponse);
 
-                nasLocation = NasLocationModel.get({id: 12});
+                nasLocationModel.getResource(successfulObjectResponse.data.id).success(function () {
+
+                    expect(nasLocationModel.getModel().id).to.equal(successfulObjectResponse.data.id);
+                });
             });
         });
 

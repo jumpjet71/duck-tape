@@ -1,11 +1,10 @@
 /**
- * The main client side java script global. Acts as a place holder for all
- * of the angular js modules that are used by the client side.
- * @type {{utils: *}}
+ * The main client side java script global. Dependency injection hierarchy for the entire
+ * client side application is defined here.
  */
 var appModules = {
     utils: angular.module('webApp.utils', []),
-    restModels: angular.module('webApp.restModels', ['ngResource']),
+    restModels: angular.module('webApp.restModels', ['ng']),
     windows: angular.module('webApp.directives.windows', []),
     controllers: angular.module('webApp.controllers', []),
     app: angular.module('webApp', ['webApp.utils', 'webApp.restModels', 'webApp.directives.windows', 'webApp.controllers'])
