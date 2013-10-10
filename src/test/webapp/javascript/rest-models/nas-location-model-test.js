@@ -3,7 +3,7 @@
 
     describe('the nas location model:', function () {
 
-        var injector, mockHttpBackend,
+        var injector, mockHttpBackend, nasLocationModel,
             newObjectRequest = {data: {computerName: 'HAL9000', serverIp: '192.17.5.20'}},
             successfulObjectResponse = {httpStatus: 200, data: {id: 12, computerName: 'HAL9000', serverIp: '192.17.5.20'}};
 
@@ -11,11 +11,10 @@
 
             injector = angular.injector(['ngMock', 'webApp.restModels']);
             mockHttpBackend = injector.get('$httpBackend');
+            nasLocationModel = injector.get('nasLocationModel');
         });
 
         it('should return a status of 200 along with a valid resource when performing a valid GET request', function () {
-
-            var nasLocationModel = injector.get('nasLocationModel');
 
             mockHttpBackend.expectGET('/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
@@ -26,8 +25,6 @@
         });
 
         it('should return a status of 201 along with a valid resource when performing a valid POST request', function () {
-
-            var nasLocationModel = injector.get('nasLocationModel');
 
             mockHttpBackend.expectPOST('/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
 
