@@ -47,7 +47,7 @@
         "files": [
             "src/main/webapp/javascript/main.js"
             , "src/main/webapp/javascript/utils/**/*.js"
-            , "src/main/webapp/javascript/rest-models/**/*.js"
+            , "src/main/webapp/javascript/rest-resources/**/*.js"
             , "src/main/webapp/javascript/directives/**/*.js"
             , "src/main/webapp/javascript/controllers/**/*.js"
         ]

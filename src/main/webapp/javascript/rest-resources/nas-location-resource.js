@@ -3,17 +3,17 @@
  * NAS Resource model object.
  *
  * @class uuidUtils
- * @module webapp.javascript.utils
+ * @module webapp.javascript.restResources
  *
  */
-(function (restModels) {
+(function (restResources) {
     'use strict';
 
-    restModels.factory('nasLocationModel', function ($http, baseResource) {
+    restResources.factory('nasLocationResource', function (baseResource) {
 
         baseResource.url = "/v1/api/csv/nas-locations";
 
         return baseResource;
     });
 
-})(appModules.restModels);
+})(appModules.restResources);

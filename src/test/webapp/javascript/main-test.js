@@ -29,11 +29,11 @@
             });
         });
 
-        describe('the "appModules.restModels" namespace', function () {
+        describe('the "appModules.restResources" namespace', function () {
 
             it('should exist', function () {
 
-                expect(appModules.restModels).to.be.ok;
+                expect(appModules.restResources).to.be.ok;
             });
         });
     });
