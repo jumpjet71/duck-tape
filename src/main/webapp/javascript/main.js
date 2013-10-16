@@ -3,8 +3,8 @@
  * client side application is defined here.
  */
 var appModules = {
-    utils: angular.module('webApp.utils', []),
-    restModels: angular.module('webApp.restModels', ['ng']),
+    utils: angular.module('webApp.utils', ['ng']),
+    restModels: angular.module('webApp.restModels', ['webApp.utils']),
     windows: angular.module('webApp.directives.windows', []),
     controllers: angular.module('webApp.controllers', []),
     app: angular.module('webApp', ['webApp.utils', 'webApp.restModels', 'webApp.directives.windows', 'webApp.controllers'])

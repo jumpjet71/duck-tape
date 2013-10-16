@@ -20,8 +20,8 @@
 
             nasLocationModel.getResource(successfulObjectResponse.data.id).success(function () {
 
-                expect(nasLocationModel.getModel().id).to.equal(successfulObjectResponse.data.id);
-                expect(nasLocationModel.getHttpStatus()).to.equal(successfulObjectResponse.httpStatus);
+                expect(nasLocationModel.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocationModel.httpStatus).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 
@@ -33,8 +33,8 @@
 
             nasLocationModel.postResource(newObjectRequest).success(function () {
 
-                expect(nasLocationModel.getModel().id).to.equal(successfulObjectResponse.data.id);
-                expect(nasLocationModel.getHttpStatus()).to.equal(successfulObjectResponse.httpStatus);
+                expect(nasLocationModel.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocationModel.httpStatus).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 

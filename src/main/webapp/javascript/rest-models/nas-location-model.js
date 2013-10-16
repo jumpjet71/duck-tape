@@ -9,35 +9,19 @@
 (function (restModels) {
     'use strict';
 
-    restModels.factory('nasLocationModel', function ($http) {
+    restModels.factory('nasLocationModel', function ($http, restResource) {
 
-        var url = "/v1/api/csv/nas-locations", model, httpStatus;
+        var url = "/v1/api/csv/nas-locations";
 
         return {
 
-            getModel: function () {
-
-                return model;
-            },
-            getHttpStatus: function () {
-
-                return httpStatus;
-            },
             getResource: function (id) {
 
-                return $http.get(url + "/" + id).success(function (response) {
-
-                    httpStatus = response.httpStatus;
-                    model = response.data;
-                });
+                return restResource.getResource(this, url, id);
             },
             postResource: function (data) {
 
-                return $http.post(url, data).success(function (response) {
-
-                    httpStatus = response.httpStatus;
-                    model = response.data;
-                });
+                return restResource.postResource(this, url, data);
             }
         }
     });
