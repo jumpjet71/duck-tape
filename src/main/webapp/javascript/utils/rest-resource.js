@@ -1,6 +1,6 @@
 /**
  *
- * This is the base class for all REST resources. It acts as a Facade for
+ * This is the functional template for all REST resources. It acts as a Facade for
  * all REST data access.
  *
  * @class restResource
@@ -55,11 +55,12 @@
              *
              * @param {Object} that The calling object reference.
              * @param {String} url The base URI for the resource.
+             * @param {id} id The resource id.
              * @param {Object } data The object that is being updated.
              */
-            putResource: function (that, url, data) {
+            putResource: function (that, url, id, data) {
 
-                return $http.put(url, data).success(function (response) {
+                return $http.put(url + "/" + id, data).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;

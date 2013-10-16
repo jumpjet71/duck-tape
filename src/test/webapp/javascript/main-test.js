@@ -28,6 +28,14 @@
                 expect(appModules.utils).to.be.ok;
             });
         });
+
+        describe('the "appModules.restModels" namespace', function () {
+
+            it('should exist', function () {
+
+                expect(appModules.restModels).to.be.ok;
+            });
+        });
     });
 
 })();

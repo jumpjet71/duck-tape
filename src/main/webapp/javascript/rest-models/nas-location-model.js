@@ -9,21 +9,11 @@
 (function (restModels) {
     'use strict';
 
-    restModels.factory('nasLocationModel', function ($http, restResource) {
+    restModels.factory('nasLocationModel', function ($http, baseResource) {
 
-        var url = "/v1/api/csv/nas-locations";
+        baseResource.url = "/v1/api/csv/nas-locations";
 
-        return {
-
-            getResource: function (id) {
-
-                return restResource.getResource(this, url, id);
-            },
-            postResource: function (data) {
-
-                return restResource.postResource(this, url, data);
-            }
-        }
+        return baseResource;
     });
 
 })(appModules.restModels);

@@ -38,6 +38,17 @@
             });
         });
 
+        it('should return a status of 200 along with a valid resource when performing a valid PUT request', function () {
+
+            mockHttpBackend.expectPUT('/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
+
+            nasLocationModel.putResource(successfulObjectResponse.data.id, newObjectRequest).success(function () {
+
+                expect(nasLocationModel.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocationModel.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+            });
+        });
+
         afterEach(function () {
 
             mockHttpBackend.flush();

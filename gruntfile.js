@@ -88,7 +88,7 @@ module.exports = function (grunt) {
                 'bower.json',
                 'concatenation.json',
                 'src/main/webapp/javascript/directives/**/*.js',
-                'src/main/webapp/javascript/models/**/*.js',
+                'src/main/webapp/javascript/rest-models/models/**/*.js',
                 'src/main/webapp/javascript/utils/**/*.js',
                 'src/test/webapp/javascript/directives/**/*.js',
                 'src/test/webapp/javascript/rest-models/**/*.js',
