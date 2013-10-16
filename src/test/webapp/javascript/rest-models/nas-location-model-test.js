@@ -21,16 +21,20 @@
             nasLocationModel.getResource(successfulObjectResponse.data.id).success(function () {
 
                 expect(nasLocationModel.getModel().id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocationModel.getHttpStatus()).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 
         it('should return a status of 201 along with a valid resource when performing a valid POST request', function () {
+
+            successfulObjectResponse.httpStatus = 201;
 
             mockHttpBackend.expectPOST('/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
 
             nasLocationModel.postResource(newObjectRequest).success(function () {
 
                 expect(nasLocationModel.getModel().id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocationModel.getHttpStatus()).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 
