@@ -11,41 +11,17 @@
 (function (utils) {
     'use strict';
 
-    utils.factory('baseResourceUtils', function ($http) {
+    utils.factory('baseResourceUtils', function ($http, urlUtils) {
 
         return {
 
             /**
-             * REST API version.
+             * REST resource URL settings and configuration.
              */
-            version: "v1",
+            url : urlUtils,
             /**
-             * Web protocol (http or https).
-             */
-            protocol: "http",
-            /**
-             * The REST endpoint host name
-             */
-            host: "localhost",
-            /**
-             * The REST endpoint port number.
-             */
-            port: 9090,
-            /**
-             * The base URL path for the resource
-             */
-            path: null,
-            /**
-             * Get a REST endpoint URL based on api version, protocol, host, port, and base path url values.
-             * @method createUrl
-             */
-            getUrl: function () {
-
-                return this.protocol + "://" + this.host + ":" + this.port + "/" + this.version  + this.path;
-            },
-            /**
-             * Used to retrieve (or read) a representation of a resource. In the “happy” (or non-error) path, returns a representation in JSON
-             * and a response code of 200(OK). In an error case, it returns 4xx and 5xx http request error codes.
+             * Used to retrieve (or read) a representation of a resource. In the “happy” (or non-error) path, returns
+             * a representation in JSON and a response code of 200(OK). In an error case, it returns 4xx and 5xx http request error codes.
              *
              * @method getResource
              *
@@ -57,7 +33,7 @@
 
                 var that = this;
 
-                return $http.get(this.getUrl() + "/" + id).success(function (response) {
+                return $http.get(this.url.getUrl() + "/" + id).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -65,7 +41,8 @@
             },
             /**
              * Used for creation of new resources. On successful creation, return HTTP status 201,
-             * returning a the newly-created resource with the 201 HTTP status.In an error case, it returns 4xx and 5xx http request error codes.
+             * returning a the newly-created resource with the 201 HTTP status.
+             * In an error case, it returns 4xx and 5xx http request error codes.
              *
              * @method postResource
              *
@@ -77,17 +54,40 @@
 
                 var that = this;
 
-                return $http.post(this.getUrl(), data).success(function (response) {
+                return $http.post(this.url.getUrl(), data).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
                 });
             },
+            /**
+             * Used to update and existing resource. On successful update, return HTTP status 200,
+             * returning a the updated resource with the 201 HTTP status.
+             * In an error case, it returns 4xx and 5xx http request error codes.
+             *
+             * @method putResource
+             *
+             * @param {id} id The resource id.
+             * @param {Object} data The object that is being created.
+             *
+             * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
+             * These closures are used to handle asynchronous requests operations.
+             */
             putResource: function (id, data) {
 
                 var that = this;
 
-                return $http.put(this.getUrl() + "/" + id, data).success(function (response) {
+                return $http.put(this.url.getUrl() + "/" + id, data).success(function (response) {
+
+                    that.httpStatus = response.httpStatus;
+                    that.model = response.data;
+                });
+            },
+            deleteResource: function (id) {
+
+                var that = this;
+
+                return $http.delete(this.url.getUrl() + "/" + id).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;

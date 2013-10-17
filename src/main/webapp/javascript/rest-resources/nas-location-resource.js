@@ -10,7 +10,7 @@
 
     restResources.factory('nasLocationResource', function (baseResourceUtils) {
 
-        baseResourceUtils.path = "/api/csv/nas-locations";
+        baseResourceUtils.url.path = "/api/csv/nas-locations";
 
         return baseResourceUtils;
     });
