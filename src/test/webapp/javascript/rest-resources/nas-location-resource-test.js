@@ -12,7 +12,7 @@
             mockHttpBackend = injector.get('$httpBackend');
             nasLocationResource = injector.get('nasLocationResource');
 
-            newObjectRequest = {data: {computerName: 'HAL9000', serverIp: '192.17.5.20'}};
+            newObjectRequest = {computerName: 'HAL9000', serverIp: '192.17.5.20'};
             successfulObjectResponse = {httpStatus: 200, data: {id: 12, computerName: 'HAL9000', serverIp: '192.17.5.20'}};
             successfulDeletedObjectResponse = {httpStatus: 200, data: {id: 12, deleted: true}};
         });
@@ -32,9 +32,26 @@
 
             successfulObjectResponse.httpStatus = 201;
 
+            nasLocationResource.model = newObjectRequest;
+
             mockHttpBackend.expectPOST('http://localhost:9090/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
 
-            nasLocationResource.postResource(newObjectRequest).success(function () {
+            nasLocationResource.postResource().success(function () {
+
+                expect(nasLocationResource.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocationResource.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+            });
+        });
+
+        it('should return a status of 200 along with a valid resource when performing a valid PUT request', function () {
+
+            successfulObjectResponse.httpStatus = 201;
+
+            nasLocationResource.model = successfulObjectResponse.data;
+
+            mockHttpBackend.expectPUT('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
+
+            nasLocationResource.putResource(successfulObjectResponse.data.id).success(function () {
 
                 expect(nasLocationResource.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocationResource.httpStatus).to.equal(successfulObjectResponse.httpStatus);
@@ -57,10 +74,6 @@
             mockHttpBackend.flush();
             mockHttpBackend.verifyNoOutstandingExpectation();
             mockHttpBackend.verifyNoOutstandingRequest();
-
-            newObjectRequest = null;
-            successfulObjectResponse = null;
-            successfulDeletedObjectResponse = null;
         });
     });
 })();

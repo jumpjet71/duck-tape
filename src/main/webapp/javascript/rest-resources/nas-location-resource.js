@@ -1,7 +1,7 @@
 /**
  * NAS Resource model object.
  *
- * @class uuidUtils
+ * @class nasLocationResource
  * @module webapp.javascript.restResources
  *
  */

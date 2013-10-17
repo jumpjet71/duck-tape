@@ -1,15 +1,16 @@
 /**
  *
- * URL factory class.
+ * The URL configuration utility. Used to determine the URL
+ * prefixes for all of the REST resources.
  *
- * @class urlUtils
+ * @class urlConfigUtils
  * @module webapp.javascript.utils
  *
  */
 (function (utils) {
     'use strict';
 
-    utils.factory('urlUtils', function () {
+    utils.factory('urlConfigUtils', function () {
 
         return {
 

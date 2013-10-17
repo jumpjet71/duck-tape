@@ -11,14 +11,18 @@
 (function (utils) {
     'use strict';
 
-    utils.factory('baseResourceUtils', function ($http, urlUtils) {
+    utils.factory('baseResourceUtils', function ($http, urlConfigUtils) {
 
         return {
 
             /**
+             * Underlying resource object.
+             */
+            model : {},
+            /**
              * REST resource URL settings and configuration.
              */
-            url : urlUtils,
+            url : urlConfigUtils,
             /**
              * Used to retrieve (or read) a representation of a resource. In the “happy” (or non-error) path, returns
              * a representation in JSON and a response code of 200(OK). In an error case, it returns 4xx and 5xx http request error codes.
@@ -46,15 +50,14 @@
              *
              * @method postResource
              *
-             * @param {Object} data The object that is being created.
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            postResource: function (data) {
+            postResource: function () {
 
                 var that = this;
 
-                return $http.post(this.url.getUrl(), data).success(function (response) {
+                return $http.post(this.url.getUrl(), that.model).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -68,16 +71,15 @@
              * @method putResource
              *
              * @param {id} id The resource id.
-             * @param {Object} data The object that is being created.
              *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            putResource: function (id, data) {
+            putResource: function (id) {
 
                 var that = this;
 
-                return $http.put(this.url.getUrl() + "/" + id, data).success(function (response) {
+                return $http.put(this.url.getUrl() + "/" + id, that.model).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
