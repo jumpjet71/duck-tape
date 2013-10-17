@@ -16,7 +16,7 @@
 
         it('should return a status of 200 along with a valid resource when performing a valid GET request', function () {
 
-            mockHttpBackend.expectGET('/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
+            mockHttpBackend.expectGET('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
             nasLocationResource.getResource(successfulObjectResponse.data.id).success(function () {
 
@@ -29,7 +29,7 @@
 
             successfulObjectResponse.httpStatus = 201;
 
-            mockHttpBackend.expectPOST('/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
+            mockHttpBackend.expectPOST('http://localhost:9090/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
 
             nasLocationResource.postResource(newObjectRequest).success(function () {
 
@@ -40,7 +40,7 @@
 
         it('should return a status of 200 along with a valid resource when performing a valid PUT request', function () {
 
-            mockHttpBackend.expectPUT('/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
+            mockHttpBackend.expectPUT('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
             nasLocationResource.putResource(successfulObjectResponse.data.id, newObjectRequest).success(function () {
 

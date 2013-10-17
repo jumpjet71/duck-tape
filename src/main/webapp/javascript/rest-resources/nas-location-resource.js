@@ -1,5 +1,4 @@
 /**
- *
  * NAS Resource model object.
  *
  * @class uuidUtils
@@ -9,11 +8,11 @@
 (function (restResources) {
     'use strict';
 
-    restResources.factory('nasLocationResource', function (baseResource) {
+    restResources.factory('nasLocationResource', function (baseResourceUtils) {
 
-        baseResource.url = "/v1/api/csv/nas-locations";
+        baseResourceUtils.path = "/api/csv/nas-locations";
 
-        return baseResource;
+        return baseResourceUtils;
     });
 
 })(appModules.restResources);
