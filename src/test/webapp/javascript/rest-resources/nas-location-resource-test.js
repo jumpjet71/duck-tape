@@ -19,53 +19,59 @@
 
         it('should return a status of 200 along with a valid resource when performing a valid GET request', function () {
 
+            var nasLocation = nasLocationResource.createResource();
+
             mockHttpBackend.expectGET('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocationResource.getResource(successfulObjectResponse.data.id).success(function () {
+            nasLocation.getResource(successfulObjectResponse.data.id).success(function () {
 
-                expect(nasLocationResource.model.id).to.equal(successfulObjectResponse.data.id);
-                expect(nasLocationResource.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+                expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 
         it('should return a status of 201 along with a valid resource when performing a valid POST request', function () {
 
+            var nasLocation = nasLocationResource.createResource();
+
             successfulObjectResponse.httpStatus = 201;
 
-            nasLocationResource.model = newObjectRequest;
+            nasLocation.model = newObjectRequest;
 
             mockHttpBackend.expectPOST('http://localhost:9090/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
 
-            nasLocationResource.postResource().success(function () {
+            nasLocation.postResource().success(function () {
 
-                expect(nasLocationResource.model.id).to.equal(successfulObjectResponse.data.id);
-                expect(nasLocationResource.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+                expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 
         it('should return a status of 200 along with a valid resource when performing a valid PUT request', function () {
 
-            successfulObjectResponse.httpStatus = 201;
+            var nasLocation = nasLocationResource.createResource();
 
-            nasLocationResource.model = successfulObjectResponse.data;
+            nasLocation.model = successfulObjectResponse.data;
 
             mockHttpBackend.expectPUT('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocationResource.putResource(successfulObjectResponse.data.id).success(function () {
+            nasLocation.putResource(successfulObjectResponse.data.id).success(function () {
 
-                expect(nasLocationResource.model.id).to.equal(successfulObjectResponse.data.id);
-                expect(nasLocationResource.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+                expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 
         it('should return a status of 200 along with a valid resource when performing a valid DELETE request', function () {
 
+            var nasLocation = nasLocationResource.createResource();
+
             mockHttpBackend.expectDELETE('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulDeletedObjectResponse);
 
-            nasLocationResource.deleteResource(successfulObjectResponse.data.id).success(function () {
+            nasLocation.deleteResource(successfulObjectResponse.data.id).success(function () {
 
-                expect(nasLocationResource.model.id).to.equal(successfulObjectResponse.data.id);
-                expect(nasLocationResource.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+                expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
+                expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
             });
         });
 

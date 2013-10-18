@@ -1,5 +1,5 @@
 /**
- * NAS Resource model object.
+ * The NAS resource class factory.
  *
  * @class nasLocationResource
  * @module webapp.javascript.restResources
@@ -10,9 +10,20 @@
 
     restResources.factory('nasLocationResource', function (baseResourceUtils) {
 
-        baseResourceUtils.url.path = "/api/csv/nas-locations";
+        var Resource = function () {
 
-        return baseResourceUtils;
+            baseResourceUtils.url.path = "/api/csv/nas-locations";
+
+            return baseResourceUtils;
+        };
+
+        return {
+
+            createResource: function () {
+
+                return new Resource();
+            }
+        };
     });
 
 })(appModules.restResources);
