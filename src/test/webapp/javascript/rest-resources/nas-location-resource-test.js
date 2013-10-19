@@ -23,7 +23,7 @@
 
             mockHttpBackend.expectGET('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocation.getResource(successfulObjectResponse.data.id).success(function () {
+            nasLocation.getResource(successfulObjectResponse.data.id).then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
@@ -55,7 +55,7 @@
 
             mockHttpBackend.expectPUT('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocation.putResource(successfulObjectResponse.data.id).success(function () {
+            nasLocation.putResource(successfulObjectResponse.data.id).then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
@@ -68,7 +68,7 @@
 
             mockHttpBackend.expectDELETE('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulDeletedObjectResponse);
 
-            nasLocation.deleteResource(successfulObjectResponse.data.id).success(function () {
+            nasLocation.deleteResource(successfulObjectResponse.data.id).then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
