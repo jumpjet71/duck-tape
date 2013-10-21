@@ -19,7 +19,7 @@
 
         return {
 
-            createResource: function () {
+            createResourceObject: function () {
 
                 return new Resource();
             }

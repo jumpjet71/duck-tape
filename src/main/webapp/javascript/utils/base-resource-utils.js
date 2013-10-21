@@ -20,6 +20,10 @@
              */
             model : {},
             /**
+             * The HTTP response status.
+             */
+            httpStatus: null,
+            /**
              * REST resource URL settings and configuration.
              */
             url : urlConfigUtils,
@@ -85,6 +89,18 @@
                     that.model = response.data;
                 });
             },
+            /**
+             * Used to perform the contrary of PUT. Used when you want
+             * to delete the resource identified by the URL of the request.
+             * On successful delete, return HTTP status 200.
+             *
+             * @method deleteResource
+             *
+             * @param {id} id The resource id.
+             *
+             * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
+             * These closures are used to handle asynchronous requests operations.
+             */
             deleteResource: function (id) {
 
                 var that = this;

@@ -19,7 +19,7 @@
 
         it('should return a status of 200 along with a valid resource when performing a valid GET request', function () {
 
-            var nasLocation = nasLocationResource.createResource();
+            var nasLocation = nasLocationResource.createResourceObject();
 
             mockHttpBackend.expectGET('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
@@ -32,7 +32,7 @@
 
         it('should return a status of 201 along with a valid resource when performing a valid POST request', function () {
 
-            var nasLocation = nasLocationResource.createResource();
+            var nasLocation = nasLocationResource.createResourceObject();
 
             successfulObjectResponse.httpStatus = 201;
 
@@ -49,7 +49,7 @@
 
         it('should return a status of 200 along with a valid resource when performing a valid PUT request', function () {
 
-            var nasLocation = nasLocationResource.createResource();
+            var nasLocation = nasLocationResource.createResourceObject();
 
             nasLocation.model = successfulObjectResponse.data;
 
@@ -64,7 +64,7 @@
 
         it('should return a status of 200 along with a valid resource when performing a valid DELETE request', function () {
 
-            var nasLocation = nasLocationResource.createResource();
+            var nasLocation = nasLocationResource.createResourceObject();
 
             mockHttpBackend.expectDELETE('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulDeletedObjectResponse);
 
