@@ -36,18 +36,14 @@
      * @param {Object} response Express JS request response.
      */
     exports.findAllNasLocations = function (request, response) {
-        var result = { data: null, httpStatus: null, paginationCriteria: { totalCount: null } };
 
         response.set('Content-Type', 'application/json');
 
         globals.getDataStore().nasLocations.count({}, function (error, count) {
-            result.paginationCriteria.totalCount = count;
-            result.httpStatus = response.statusCode;
 
             globals.getDataStore().nasLocations.find({}, function (err, nasLocations) {
-                result.data = nasLocations;
-                result.httpStatus = response.statusCode;
-                response.send(result);
+
+                listResponse.processResponse(request, response, count, nasLocations);
             });
         });
 

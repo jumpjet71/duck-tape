@@ -18,7 +18,7 @@ exports.singleResponse = (function () {
 
             if (data) {
 
-                responseObject = successfulResponse.create(response.statusCode, data);
+                responseObject = successfulResponse.createResponse(response.statusCode, data);
             }
             else {
 

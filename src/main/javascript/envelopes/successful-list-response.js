@@ -17,7 +17,7 @@ exports.successFullListResponse = (function () {
         /**
          * The JSON array representing a list of endpoint resources.
          */
-        this.data = httpStatus;
+        this.data = data;
         /**
          * The pagination criteria used to construct this response.
          */
@@ -26,7 +26,7 @@ exports.successFullListResponse = (function () {
 
     return {
 
-        create: function (httpStatus, data, paginationCriteria) {
+        createResponse: function (httpStatus, data, paginationCriteria) {
 
             return new Envelope(httpStatus, data, paginationCriteria);
         }

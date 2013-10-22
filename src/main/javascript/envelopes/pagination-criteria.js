@@ -47,7 +47,7 @@ exports.paginationCriteria = (function () {
 
     return {
 
-        create: function (size, sort, order, current, totalCount) {
+        createCriteria: function (size, sort, order, current, totalCount) {
 
             return new Envelope(size, sort, order, current, totalCount);
         }

@@ -19,15 +19,15 @@ exports.listResponse = (function () {
 
             if (data) {
 
-                paginationObject = paginationCriteria.create(request.params.size, request.params.sort,
-                    request.params.order, request.params.current, count);
-                responseObject = successfulListResponse.create(response.statusCode, data, paginationCriteria);
+                paginationObject = paginationCriteria.createCriteria(request.query.size, request.query.sort,
+                    request.query.order, request.query.current, count);
+                responseObject = successfulListResponse.createResponse(response.statusCode, data, paginationObject);
             }
             else {
 
                 responseObject = errorResponse.create(404,
-                    "The requested resource was not found",
-                    "The resource with the id " + request.params.id + " does not match any of the resources that exist in the system data store.", null);
+                    "The requested list of resources resource was not found",
+                    "The requested list of resources does not match any of the resources that exist in the system data store.", null);
 
                 response.status(404);
             }

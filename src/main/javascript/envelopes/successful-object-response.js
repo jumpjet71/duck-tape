@@ -22,7 +22,7 @@ exports.successFullObjectResponse = (function () {
 
     return {
 
-        create: function (httpStatus, data) {
+        createResponse: function (httpStatus, data) {
 
             return new Envelope(httpStatus, data);
         }
