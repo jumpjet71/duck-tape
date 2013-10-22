@@ -8,7 +8,8 @@
     'use strict';
 
     var globals = require('../utils/globals-utils').globalsUtils,
-        singleResponse = require('../handlers/single-response').singleResponse;
+        singleResponse = require('../handlers/single-response').singleResponse,
+        listResponse = require('../handlers/list-response').listResponse;
 
     /**
      * Find a NAS location resource using it's unique identifier.
@@ -22,7 +23,7 @@
 
         globals.getDataStore().nasLocations.findOne({ id: request.params.id }, function (error, nasLocation) {
 
-            singleResponse.process(request, response, nasLocation);
+            singleResponse.processResponse(request, response, nasLocation);
         });
     };
 

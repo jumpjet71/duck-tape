@@ -52,12 +52,12 @@
              * returning a the newly-created resource with the 201 HTTP status.
              * In an error case, it returns 4xx and 5xx http request error codes.
              *
-             * @method postResource
+             * @method createResource
              *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            postResource: function () {
+            createResource: function () {
 
                 var that = this;
 
@@ -72,14 +72,14 @@
              * returning a the updated resource with the 201 HTTP status.
              * In an error case, it returns 4xx and 5xx http request error codes.
              *
-             * @method putResource
+             * @method updateResource
              *
              * @param {id} id The resource id.
              *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            putResource: function (id) {
+            updateResource: function (id) {
 
                 var that = this;
 
@@ -90,8 +90,7 @@
                 });
             },
             /**
-             * Used to perform the contrary of PUT. Used when you want
-             * to delete the resource identified by the URL of the request.
+             * Used when you want to delete the resource identified by the URL of the request.
              * On successful delete, return HTTP status 200.
              *
              * @method deleteResource
@@ -110,6 +109,9 @@
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
                 });
+            },
+            getAllResources: function () {
+
             }
         };
     });

@@ -1,7 +1,7 @@
 /**
  * Process all single object responses and creates error and success objects as needed.
  *
- * @class singleObjectHandler
+ * @class singleResponse
  * @module javascript.handlers
  */
 exports.singleResponse = (function () {
@@ -12,7 +12,7 @@ exports.singleResponse = (function () {
 
     return {
 
-        process: function (request, response, data) {
+        processResponse: function (request, response, data) {
 
             response.set('Content-Type', 'application/json');
 

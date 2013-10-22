@@ -40,7 +40,7 @@
 
             mockHttpBackend.expectPOST('http://localhost:9090/v1/api/csv/nas-locations').respond(201, successfulObjectResponse);
 
-            nasLocation.postResource().success(function () {
+            nasLocation.createResource().success(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
@@ -55,7 +55,7 @@
 
             mockHttpBackend.expectPUT('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocation.putResource(successfulObjectResponse.data.id).then(function () {
+            nasLocation.updateResource(successfulObjectResponse.data.id).then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
