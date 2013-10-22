@@ -8,7 +8,7 @@
 
         describe('creating a pagination criteria with correct values', function () {
 
-            var total = 20, hasPreviousPage = false, hasNextPage = true, envelope = paginationCriteria.create(10, "name", true, 1, 200);
+            var total = 20, hasPreviousPage = false, hasNextPage = true, envelope = paginationCriteria.createCriteria(10, "name", true, 1, 200);
 
             it('should return a total with value ' + total, function () {
 
@@ -28,7 +28,7 @@
 
         describe('creating a pagination criteria with incorrect values', function () {
 
-            var total = 1, envelope = paginationCriteria.create(-10, "name", true, 1, 200);
+            var total = 1, envelope = paginationCriteria.createCriteria(-10, "name", true, 1, 200);
 
             it('should return a total with value ' + total, function () {
 
