@@ -33,7 +33,7 @@ exports.errorResponse = (function () {
 
     return {
 
-        create: function (httpStatus, message, developerMessage, validationErrors) {
+        createResponse: function (httpStatus, message, developerMessage, validationErrors) {
 
             return new Envelope(httpStatus, message, developerMessage, validationErrors);
         }

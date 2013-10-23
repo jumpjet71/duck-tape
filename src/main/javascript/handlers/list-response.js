@@ -21,11 +21,12 @@ exports.listResponse = (function () {
 
                 paginationObject = paginationCriteria.createCriteria(request.query.size, request.query.sort,
                     request.query.order, request.query.current, count);
+
                 responseObject = successfulListResponse.createResponse(response.statusCode, data, paginationObject);
             }
             else {
 
-                responseObject = errorResponse.create(404,
+                responseObject = errorResponse.createResponse(404,
                     "The requested list of resources resource was not found",
                     "The requested list of resources does not match any of the resources that exist in the system data store.", null);
 
