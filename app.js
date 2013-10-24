@@ -70,7 +70,7 @@
 
         response.status(404);
         response.set('Content-Type', 'application/json');
-        response.send(errorResponse.create(404, "The requested resource was not found",
+        response.send(errorResponse.createResponse(404, "The requested resource was not found",
             "The resource URL is malformed and does not match the location of any resources in the system", null));
     });
 

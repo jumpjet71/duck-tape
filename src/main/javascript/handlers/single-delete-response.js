@@ -4,21 +4,22 @@
  * @class singleResponse
  * @module javascript.handlers
  */
-exports.singleResponse = (function () {
+exports.singleDeleteResponse = (function () {
     'use strict';
 
     var successfulResponse = require('../envelopes/successful-object-response').successFullObjectResponse,
+        deleteResponse = require('../envelopes/delete-response').deleteResponse,
         errorResponse = require('../envelopes/error-response').errorResponse, responseObject;
 
     return {
 
-        processResponse: function (request, response, data) {
+        processResponse: function (request, response) {
 
             response.set('Content-Type', 'application/json');
 
-            if (data) {
+            if (request.params.id) {
 
-                responseObject = successfulResponse.createResponse(response.statusCode, data);
+                responseObject = successfulResponse.createResponse(response.statusCode, deleteResponse.createResponse(request.params.id, true));
             }
             else {
 

@@ -9,6 +9,7 @@
 
     var globals = require('../utils/globals-utils').globalsUtils,
         singleResponse = require('../handlers/single-response').singleResponse,
+        singleDeleteResponse = require('../handlers/single-delete-response.js').singleDeleteResponse,
         listResponse = require('../handlers/list-response').listResponse;
 
     /**
@@ -24,6 +25,21 @@
         globals.getDataStore().nasLocations.findOne({ id: request.params.id }, function (error, nasLocation) {
 
             singleResponse.processResponse(request, response, nasLocation);
+        });
+    };
+
+    /**
+     *
+     * @method deleteNasLocationById
+     *
+     * @param {Object} request Express JS request object.
+     * @param {Object} response Express JS request response.
+     */
+    exports.deleteNasLocationById = function(request, response) {
+
+        globals.getDataStore().nasLocations.remove({ id: request.params.id }, function (error, numRemoved) {
+
+            singleDeleteResponse.processResponse(request, response, numRemoved);
         });
     };
 

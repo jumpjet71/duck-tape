@@ -28,7 +28,7 @@ exports.paginationCriteria = (function () {
         this.order = (typeof order === 'boolean' ? order : true);
         /**
          * The number of the current page.
-         * Is always nonnegative, and equal or less than total.
+         * Is always non negative, and equal or less than total.
          */
         this.current = (current > 0 ? current : 1);
         /**
