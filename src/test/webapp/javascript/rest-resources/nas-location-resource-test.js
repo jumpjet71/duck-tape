@@ -4,7 +4,7 @@
     describe('the nas location resource:', function () {
 
         var injector, mockHttpBackend, nasLocationResource, newObjectRequest,
-            successfulObjectResponse, successfulDeletedObjectResponse;
+            successfulObjectResponse, successfulObjectListResponse, successfulDeletedObjectResponse;
 
         beforeEach(function () {
 
@@ -14,6 +14,7 @@
 
             newObjectRequest = {computerName: 'HAL9000', serverIp: '192.17.5.20'};
             successfulObjectResponse = {httpStatus: 200, data: {id: 12, computerName: 'HAL9000', serverIp: '192.17.5.20'}};
+            successfulObjectListResponse = {httpStatus: 200, data: [{id: 12, computerName: 'HAL9000', serverIp: '192.17.5.20'}]};
             successfulDeletedObjectResponse = {httpStatus: 200, data: {id: 12, deleted: true}};
         });
 
@@ -27,6 +28,20 @@
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
+            });
+        });
+
+        it('should return a status of 200 along with a valid list of resource when performing a valid GET list request', function () {
+
+            var nasLocation = nasLocationResource.createResourceObject();
+
+            nasLocation.paginationCriteria = {};
+
+            mockHttpBackend.expectGET('http://localhost:9090/v1/api/csv/nas-locations').respond(200, successfulObjectListResponse);
+
+            nasLocation.getAllResources().then(function () {
+
+                expect(nasLocation.httpStatus).to.equal(successfulObjectListResponse.httpStatus);
             });
         });
 

@@ -53,7 +53,6 @@
         app.use(passport.session());
 
         app.use(app.router);
-
     });
 
     // Configure data store and store it's instance as global pointer.

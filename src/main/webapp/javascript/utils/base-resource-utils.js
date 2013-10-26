@@ -18,7 +18,15 @@
             /**
              * Underlying resource object.
              */
-            model : {},
+            model: {},
+            /**
+             * The collection resource object.
+             */
+            collection: {},
+            /**
+             * The collection pagination criteria
+             */
+            paginationCriteria: {},
             /**
              * The HTTP response status.
              */
@@ -26,7 +34,7 @@
             /**
              * REST resource URL settings and configuration.
              */
-            url : urlConfigUtils,
+            url: urlConfigUtils,
             /**
              * Used to retrieve (or read) a representation of a resource. In the “happy” (or non-error) path, returns
              * a representation in JSON and a response code of 200(OK). In an error case, it returns 4xx and 5xx http request error codes.
@@ -110,8 +118,25 @@
                     that.model = response.data;
                 });
             },
+            /**
+             *
+             * Get a list of all resources using pagination criteria.
+             *
+             * @method getAllResources
+             *
+             * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
+             * These closures are used to handle asynchronous requests operations.
+             */
             getAllResources: function () {
 
+                var that = this;
+
+                return $http.get(this.url.getUrl(), that.paginationCriteria).success(function (response) {
+
+                    that.httpStatus = response.httpStatus;
+                    that.collection = response.data;
+                    that.paginationCriteria = response.paginationCriteria;
+                });
             }
         };
     });
