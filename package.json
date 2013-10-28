@@ -50,7 +50,8 @@
         "connect-flash": "0.1.1",
         "underscore": "1.5.1",
         "node-uuid": "1.4.1",
-        "nedb": "0.8.9"
+        "nedb": "0.8.9",
+        "http-proxy": "0.10.3"
     },
     "engines": {
         "node": ">=0.10.0",
