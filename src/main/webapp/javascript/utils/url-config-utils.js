@@ -15,21 +15,9 @@
         return {
 
             /**
-             * REST API version.
+             * Web protocol (http or https), endpoint host name, endpoint port number, and REST API version
              */
-            version: "v1",
-            /**
-             * Web protocol (http or https).
-             */
-            protocol: "http",
-            /**
-             * The REST endpoint host name
-             */
-            host: "localhost",
-            /**
-             * The REST endpoint port number.
-             */
-            port: 9090,
+            urlPrefix: "http://localhost:9090/v1",
             /**
              * The base URL path for the resource
              */
@@ -40,7 +28,7 @@
              */
             getUrl: function () {
 
-                return this.protocol + "://" + this.host + ":" + this.port + "/" + this.version  + this.path;
+                return this.urlPrefix  + this.path;
             }
         };
     });

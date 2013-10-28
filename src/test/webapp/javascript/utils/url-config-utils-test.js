@@ -25,8 +25,8 @@
 
                 var urlConfigUtils = injector.get('urlConfigUtils');
 
+                urlConfigUtils.urlPrefix = "http://localhost:9090/v42";
                 urlConfigUtils.path = "/test";
-                urlConfigUtils.version = "v42";
 
                 expect(urlConfigUtils.getUrl()).to.equal("http://localhost:9090/v42/test");
             });

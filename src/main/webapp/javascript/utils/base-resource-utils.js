@@ -1,6 +1,6 @@
 /**
  *
- * This is model resource base class.
+ * This is model resource and mode collection base class.
  * When used as functional inheritance template , all child classes will
  * inherit it's methods. It acts as a Facade for all REST data access.
  *
@@ -41,7 +41,7 @@
              *
              * @method getResource
              *
-             * @param {id} id The resource id.
+             * @param {Object} id The resource id.
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
@@ -82,7 +82,7 @@
              *
              * @method updateResource
              *
-             * @param {id} id The resource id.
+             * @param {Object} id The resource id.
              *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
@@ -103,7 +103,7 @@
              *
              * @method deleteResource
              *
-             * @param {id} id The resource id.
+             * @param {Object} id The resource id.
              *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
@@ -137,6 +137,18 @@
                     that.collection = response.data;
                     that.paginationCriteria = response.paginationCriteria;
                 });
+            },
+            /**
+             *
+             * Set the underlying model with an object defined in the collection.
+             *
+             * @method setModelFromCollection
+             *
+             * @param {Object} id The resource id.
+             */
+            setModelFromCollection: function (id) {
+
+                this.model = _.findWhere(this.collection, {id: id});
             }
         };
     });
