@@ -32,7 +32,6 @@
             });
         });
 
-
         afterEach(function () {
 
             injector = null;

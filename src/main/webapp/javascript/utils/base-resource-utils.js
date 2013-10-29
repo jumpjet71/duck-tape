@@ -149,6 +149,7 @@
             setModelFromCollection: function (id) {
 
                 this.model = _.findWhere(this.collection, {id: id});
+                return this.model;
             }
         };
     });
