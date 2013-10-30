@@ -19,4 +19,5 @@ exports.configNasLocation = function (app, mode) {
     app.get(path + '/csv/nas-locations', service.findAllNasLocations);
     app.delete(path + '/csv/nas-locations/:id', service.deleteNasLocationById);
     app.put(path + '/csv/nas-locations/:id', service.updateNasLocation);
+    app.post(path + '/csv/nas-locations', service.createNasLocation);
 };

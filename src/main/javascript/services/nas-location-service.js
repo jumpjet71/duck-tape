@@ -11,7 +11,8 @@
         singleResponse = require('../handlers/single-response').singleResponse,
         singleDeleteResponse = require('../handlers/single-delete-response.js').singleDeleteResponse,
         listResponse = require('../handlers/list-response').listResponse,
-        emptyFieldUtils = require('../utils/empty-field-utils').emptyFieldUtils;
+        emptyFieldUtils = require('../utils/empty-field-utils').emptyFieldUtils,
+        uuidUtils = require('../../javascript/utils/uuid-utils').uuidUtils;
 
     /**
      * Find a NAS location resource using it's unique identifier.
@@ -65,6 +66,27 @@
 
     /**
      *
+     * Create a NAS location object.
+     *
+     * @method findAllNasLocations
+     *
+     * @param {Object} request Express JS request object.
+     * @param {Object} response Express JS request response.
+     */
+    exports.createNasLocation = function (request, response) {
+
+        var model = emptyFieldUtils.removeEmpty({id: uuidUtils.generate(), computerName: request.query.computerName,
+            serverIp: request.query.computerName, shareName: request.query.shareName});
+
+        globals.getDataStore().nasLocations.insert(model, function () {
+
+            response.status(201);
+            singleResponse.processResponse(request, response, model);
+        });
+    };
+
+    /**
+     *
      * Update a NAS location object.
      *
      * @method findAllNasLocations
@@ -80,7 +102,10 @@
         globals.getDataStore().nasLocations.update({ id: request.params.id },
             { $set: model }, { multi: true }, function () {
 
-            singleResponse.processResponse(request, response, model);
-        });
+                globals.getDataStore().nasLocations.findOne({ id: request.params.id }, function (error, nasLocation) {
+
+                    singleResponse.processResponse(request, response, nasLocation);
+                });
+            });
     };
 })();
