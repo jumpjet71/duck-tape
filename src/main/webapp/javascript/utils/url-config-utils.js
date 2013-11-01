@@ -17,18 +17,18 @@
             /**
              * Web protocol (http or https), endpoint host name, endpoint port number, and REST API version
              */
-            urlPrefix: "http://localhost:9090/v1",
+            rootUrl: "http://localhost:9090/v1",
             /**
              * The base URL path for the resource
              */
             path: null,
             /**
              * Get a REST endpoint URL based on api version, protocol, host, port, and base path url values.
-             * @method createUrl
+             * @method getUrl
              */
             getUrl: function () {
 
-                return this.urlPrefix  + this.path;
+                return this.rootUrl  + this.path;
             }
         };
     });

@@ -47,5 +47,14 @@ From the `duck-tape` project directory , run the following commands:
 
 	npm install
 
+### Developing
+
+There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
+
+* `grunt`: Perform a normal build, run jshint, css lint and all mocha based unit tests.
+* `grunt deploy`: Perform a production build, compress all JS and CSS, run jshint, css lint and all mocha based unit tests.
+* `grunt dist`: Create build artifacts only.
+* `grunt runTests`: Run all server js and all client JS unit tests.
+
 ## License
 Copyright 2013 under the [MIT License](LICENSE).

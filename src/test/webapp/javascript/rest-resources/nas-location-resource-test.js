@@ -21,10 +21,11 @@
         it('should return a status of 200 along with a valid resource when performing a valid GET request', function () {
 
             var nasLocation = nasLocationResource.createResourceObject();
+            nasLocation.model.id = 12;
 
             mockHttpBackend.expectGET('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocation.getResource(successfulObjectResponse.data.id).then(function () {
+            nasLocation.getResource().then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
@@ -48,6 +49,7 @@
         it('should return a status of 201 along with a valid resource when performing a valid POST request', function () {
 
             var nasLocation = nasLocationResource.createResourceObject();
+            nasLocation.model.id = 12;
 
             successfulObjectResponse.httpStatus = 201;
 
@@ -67,10 +69,11 @@
             var nasLocation = nasLocationResource.createResourceObject();
 
             nasLocation.model = successfulObjectResponse.data;
+            nasLocation.model.id = 12;
 
             mockHttpBackend.expectPUT('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulObjectResponse);
 
-            nasLocation.updateResource(successfulObjectResponse.data.id).then(function () {
+            nasLocation.updateResource().then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);
@@ -80,10 +83,11 @@
         it('should return a status of 200 along with a valid resource when performing a valid DELETE request', function () {
 
             var nasLocation = nasLocationResource.createResourceObject();
+            nasLocation.model.id = 12;
 
             mockHttpBackend.expectDELETE('http://localhost:9090/v1/api/csv/nas-locations/12').respond(200, successfulDeletedObjectResponse);
 
-            nasLocation.deleteResource(successfulObjectResponse.data.id).then(function () {
+            nasLocation.deleteResource().then(function () {
 
                 expect(nasLocation.model.id).to.equal(successfulObjectResponse.data.id);
                 expect(nasLocation.httpStatus).to.equal(successfulObjectResponse.httpStatus);

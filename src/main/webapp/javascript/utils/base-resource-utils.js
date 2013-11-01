@@ -41,15 +41,14 @@
              *
              * @method getResource
              *
-             * @param {Object} id The resource id.
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            getResource: function (id) {
+            getResource: function () {
 
                 var that = this;
 
-                return $http.get(this.url.getUrl() + "/" + id).success(function (response) {
+                return $http.get(this.url.getUrl() + "/" + this.model.id).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -69,7 +68,7 @@
 
                 var that = this;
 
-                return $http.post(this.url.getUrl(), that.model).success(function (response) {
+                return $http.post(this.url.getUrl(), this.model).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -82,16 +81,14 @@
              *
              * @method updateResource
              *
-             * @param {Object} id The resource id.
-             *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            updateResource: function (id) {
+            updateResource: function () {
 
                 var that = this;
 
-                return $http.put(this.url.getUrl() + "/" + id, that.model).success(function (response) {
+                return $http.put(this.url.getUrl() + "/" + this.model.id, this.model).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -103,16 +100,14 @@
              *
              * @method deleteResource
              *
-             * @param {Object} id The resource id.
-             *
              * @returns {Object} The promise/deferred object $q along with two other $http specific methods: 'success' and 'error'.
              * These closures are used to handle asynchronous requests operations.
              */
-            deleteResource: function (id) {
+            deleteResource: function () {
 
                 var that = this;
 
-                return $http.delete(this.url.getUrl() + "/" + id).success(function (response) {
+                return $http.delete(this.url.getUrl() + "/" + this.model.id).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.model = response.data;
@@ -131,25 +126,12 @@
 
                 var that = this;
 
-                return $http.get(this.url.getUrl(), that.paginationCriteria).success(function (response) {
+                return $http.get(this.url.getUrl(), this.paginationCriteria).success(function (response) {
 
                     that.httpStatus = response.httpStatus;
                     that.collection = response.data;
                     that.paginationCriteria = response.paginationCriteria;
                 });
-            },
-            /**
-             *
-             * Set the underlying model with an object defined in the collection.
-             *
-             * @method setModelFromCollection
-             *
-             * @param {Object} id The resource id.
-             */
-            setModelFromCollection: function (id) {
-
-                this.model = _.findWhere(this.collection, {id: id});
-                return this.model;
             }
         };
     });
