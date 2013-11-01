@@ -6,7 +6,7 @@
  * @module resources.configDataStore
  *
  */
-exports.configDataStore = function () {
+exports.configInMemoryDataStore = function () {
     'use strict';
     var dataStore = {};
 

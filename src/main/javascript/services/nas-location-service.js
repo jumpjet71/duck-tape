@@ -11,8 +11,9 @@
         singleResponse = require('../handlers/single-response').singleResponse,
         singleDeleteResponse = require('../handlers/single-delete-response.js').singleDeleteResponse,
         listResponse = require('../handlers/list-response').listResponse,
-        emptyFieldUtils = require('../utils/empty-field-utils').emptyFieldUtils,
-        uuidUtils = require('../../javascript/utils/uuid-utils').uuidUtils;
+        paramFieldUtils = require('../utils/param-field-utils.js').paramFieldUtils,
+        uuidUtils = require('../../javascript/utils/uuid-utils').uuidUtils,
+        modelDefinition = ["computerName", "serverIp", "shareName"];
 
     /**
      * Find a NAS location resource using it's unique identifier.
@@ -75,8 +76,8 @@
      */
     exports.createNasLocation = function (request, response) {
 
-        var model = emptyFieldUtils.removeEmpty({id: uuidUtils.generate(), computerName: request.query.computerName,
-            serverIp: request.query.computerName, shareName: request.query.shareName});
+        var model = paramFieldUtils.processParameters(modelDefinition, request);
+        model.id =  uuidUtils.generate();
 
         globals.getDataStore().nasLocations.insert(model, function () {
 
@@ -96,8 +97,8 @@
      */
     exports.updateNasLocation = function (request, response) {
 
-        var model = emptyFieldUtils.removeEmpty({id: request.params.id, computerName: request.query.computerName,
-            serverIp: request.query.computerName, shareName: request.query.shareName});
+        var model = paramFieldUtils.processParameters(modelDefinition, request);
+        model.id = request.params.id;
 
         globals.getDataStore().nasLocations.update({ id: request.params.id },
             { $set: model }, { multi: true }, function () {

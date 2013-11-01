@@ -56,7 +56,7 @@
     });
 
     // Configure data store and store it's instance as global pointer.
-    globals.setDataStore(require('./src/main/resources/config/data-store-config').configDataStore());
+    globals.setDataStore(require('./src/main/resources/config/in-memory-data-store-config').configInMemoryDataStore());
 
     // Express JS staging pages route (controller) configuration
     require('./src/main/resources/config/stage-routes-config').stageRoutesConfig(app);
