@@ -41,11 +41,12 @@
         "mocha": "1.13.0"
     },
     "dependencies": {
+        "sequelize": "2.0.0-beta.1",
         "express": "3.4.4",
         "jade": "0.35.0",
         "passport": "0.1.17",
         "passport-local": "0.1.6",
-        "connect": "2.8.4",
+        "connect": "2.11.0",
         "connect-flash": "0.1.1",
         "underscore": "1.5.1",
         "node-uuid": "1.4.1",
