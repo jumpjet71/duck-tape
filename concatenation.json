@@ -39,8 +39,7 @@
     },
     "bootstrapIELibs": {
         "files": [
-            "bower_components/html5shiv/dist/html5shiv.js"
-            , "bower_components/respond/respond.src.js"
+            "bower_components/respond/respond.src.js"
         ]
     },
     "jsApp": {
