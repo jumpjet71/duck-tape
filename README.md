@@ -33,7 +33,7 @@ The "glue code" libraries being used:
 
 ### Project Setup
 
-From the `duck-tape` project directory , run the following commands:
+From the `duck-tape` project directory , run the following from the command line:
 
 1) Install [Grunt CLI](https://github.com/gruntjs/grunt-cli) and the [Bower CLI](http://sindresorhus.com/bower-components/) global dependencies:
 
@@ -47,14 +47,15 @@ From the `duck-tape` project directory , run the following commands:
 
 	npm install
 
-### Developing
+### Available Grunt commands
 
 There are a number of [Grunt](http://www.gruntjs.com/) based targets that are used for running different build tasks:
 
-* `grunt`: Perform a normal build, run jshint, css lint and all mocha based unit tests.
-* `grunt deploy`: Perform a production build, compress all JS and CSS, run jshint, css lint and all mocha based unit tests.
-* `grunt dist`: Create build artifacts only.
-* `grunt runTests`: Run all server js and all client JS unit tests.
+* `grunt`: To run tests locally and compile the CSS and JavaScript into `/dist`.
+* `grunt deploy`: To run tests locally ,compile and [UglifyJS](http://lisperator.net/uglifyjs/) the CSS and JavaScript into `/dist`.
+* `grunt dist`: Only compile CSS and JavaScript into `/dist`.
+* `grunt runTests`: Run all server js and all client JavaScript [Mocha](http://visionmedia.github.io/mocha/) unit tests headlessly in [PhantomJS](http://phantomjs.org/).
+* `grunt watch`: This is a developer convenience method for watching JavaScript and CSS file and automatically building them whenever you save.
 
 ## License
 Copyright 2013 under the [MIT License](LICENSE).
