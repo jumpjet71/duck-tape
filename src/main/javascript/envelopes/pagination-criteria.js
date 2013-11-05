@@ -30,7 +30,7 @@ exports.paginationCriteria = (function () {
          * The number of the current page.
          * Is always non negative, and equal or less than total.
          */
-        this.current = (current > 0 ? current : 1);
+        this.current = (current <= this.total ? current : 1);
         /**
          * The total number of available elements.
          */

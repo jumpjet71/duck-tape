@@ -56,11 +56,13 @@
      */
     exports.findAllNasLocations = function (request, response) {
 
+        var pagination = paramFieldUtils.processParameters(["size", "sort", "order", "current"], request);
+
         globals.getDataStore().nasLocations.count({}, function (error, count) {
 
             globals.getDataStore().nasLocations.find({}, function (err, nasLocations) {
 
-                listResponse.processResponse(request, response, count, nasLocations);
+                listResponse.processResponse(request, response, count, pagination, nasLocations);
             });
         });
     };

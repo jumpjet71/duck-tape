@@ -13,14 +13,14 @@ exports.listResponse = (function () {
 
     return {
 
-        processResponse: function (request, response, count, data) {
+        processResponse: function (request, response, count, pagination, data) {
 
             response.set('Content-Type', 'application/json');
 
             if (data) {
 
-                paginationObject = paginationCriteria.createCriteria(request.query.size, request.query.sort,
-                    request.query.order, request.query.current, count);
+                paginationObject = paginationCriteria.createCriteria(pagination.size, pagination.sort,
+                    pagination.order, pagination.current, count);
 
                 responseObject = successfulListResponse.createResponse(response.statusCode, data, paginationObject);
             }

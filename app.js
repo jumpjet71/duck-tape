@@ -36,6 +36,7 @@
         app.set('views', __dirname + srcClient + '/views');
         app.set('view engine', 'jade');
         app.use(express.logger('dev'));
+        app.use(express.bodyParser());
         app.use(express.methodOverride());
         app.use(express.cookieParser());
         app.use(express.session({ secret: 'b051f23bf3944d92b026ed36a1d3e003' }));
