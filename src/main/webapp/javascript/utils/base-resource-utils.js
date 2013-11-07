@@ -25,6 +25,8 @@
             collection: {},
             /**
              * The collection pagination criteria
+             *
+             *
              */
             paginationCriteria: {},
             /**

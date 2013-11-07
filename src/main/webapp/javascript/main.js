@@ -5,9 +5,10 @@
 var appModules = {
     utils: angular.module('webApp.utils', ['ng']),
     restResources: angular.module('webApp.restResources', ['webApp.utils']),
-    windows: angular.module('webApp.directives.windows', []),
+    directives: angular.module('webApp.directives', []),
+    grids: angular.module('webApp.directives.grids', []),
     controllers: angular.module('webApp.controllers', ['ng', 'webApp.utils', 'webApp.restResources']),
-    app: angular.module('webApp', ['webApp.utils', 'webApp.restResources', 'webApp.directives.windows', 'webApp.controllers'])
+    app: angular.module('webApp', ['webApp.utils', 'webApp.restResources', 'webApp.directives', 'webApp.controllers'])
 };
 
 /**

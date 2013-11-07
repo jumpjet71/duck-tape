@@ -4,10 +4,10 @@
  * @class panel
  * @module webapp.javascript.directives.windows
  */
-(function (windows) {
+(function (directives) {
     'use strict';
 
-    windows.directive('panel', function () {
+    directives.directive('panel', function () {
         return {
             restrict: 'EA',
             transclude: true,
@@ -16,4 +16,4 @@
         };
     });
 
-})(appModules.windows);
+})(appModules.directives);
