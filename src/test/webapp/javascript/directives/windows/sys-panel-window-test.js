@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    describe('the panel directive:', function () {
+    describe('the sys panel window directive:', function () {
 
         var element, scope, compile, injector;
 

@@ -7,10 +7,10 @@
 (function (directives) {
     'use strict';
 
-    directives.directive('grid', function () {
+    directives.directive('sysDataGrid', function () {
         return {
             restrict: 'E',
-            templateUrl: 'data-grid.html',
+            templateUrl: 'sys-data-grid.html',
             replace: true
         };
     });

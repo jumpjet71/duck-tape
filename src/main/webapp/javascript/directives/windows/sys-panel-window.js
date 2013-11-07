@@ -7,12 +7,12 @@
 (function (directives) {
     'use strict';
 
-    directives.directive('panel', function () {
+    directives.directive('sysPanelWindow', function () {
         return {
             restrict: 'EA',
             transclude: true,
             scope: { panelTitle: '@' },
-            templateUrl: 'panel.html'
+            templateUrl: 'sys-panel-window.html'
         };
     });
 
