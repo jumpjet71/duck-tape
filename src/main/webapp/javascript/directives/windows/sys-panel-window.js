@@ -9,9 +9,9 @@
 
     directives.directive('sysPanelWindow', function () {
         return {
-            restrict: 'EA',
+            restrict: 'E',
             transclude: true,
-            scope: { panelTitle: '@' },
+            scope: { panelTitle: '@'},
             templateUrl: 'sys-panel-window.html'
         };
     });
