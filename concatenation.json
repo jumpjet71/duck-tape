@@ -51,6 +51,11 @@
             , "src/main/webapp/javascript/controllers/**/*.js"
         ]
     },
+    "jsExamples": {
+        "files": [
+            "src/main/webapp/javascript/examples/**/*.js"
+        ]
+    },
     "htmlTemplates": {
         "files": [
             "src/main/webapp/views/directives/**/*.html"

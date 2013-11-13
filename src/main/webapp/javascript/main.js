@@ -6,7 +6,7 @@ var appModules = {
     utils: angular.module('webApp.utils', ['ng']),
     restResources: angular.module('webApp.restResources', ['webApp.utils']),
     directives: angular.module('webApp.directives', []),
-    controllers: angular.module('webApp.controllers', ['ng', 'webApp.utils', 'webApp.restResources']),
+    controllers: angular.module('webApp.controllers', ['ng', 'webApp.utils', 'webApp.restResources', 'webApp.directives']),
     app: angular.module('webApp', ['webApp.utils', 'webApp.restResources', 'webApp.directives', 'webApp.controllers'])
 };
 
