@@ -3,11 +3,10 @@
  * client side application is defined here.
  */
 var appModules = {
-    utils: angular.module('webApp.utils', ['ng']),
+    utils: angular.module('webApp.utils', []),
     restResources: angular.module('webApp.restResources', ['webApp.utils']),
     directives: angular.module('webApp.directives', []),
-    controllers: angular.module('webApp.controllers', ['ng', 'webApp.utils', 'webApp.restResources', 'webApp.directives']),
-    app: angular.module('webApp', ['webApp.utils', 'webApp.restResources', 'webApp.directives', 'webApp.controllers'])
+    app: angular.module('webApp', ['webApp.utils', 'webApp.restResources', 'webApp.directives'])
 };
 
 /**

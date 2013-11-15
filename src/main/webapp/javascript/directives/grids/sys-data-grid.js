@@ -10,7 +10,8 @@
     directives.directive('sysDataGrid', function () {
         return {
             restrict: 'E',
-            scope: { gridTitle: '@', gridPagination: '@', gridColumns: '=columns'},
+            replace: true,
+            scope: {gridTitle: '@', gridPagination: '@', gridColumns: '=', gridRows: '='},
             templateUrl: 'sys-data-grid.html'
         };
     });

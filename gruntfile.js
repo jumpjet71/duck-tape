@@ -63,6 +63,10 @@ module.exports = function (grunt) {
                 src: concatenation.cssApp.themes.standard.files,
                 dest: 'dist/main/webapp/stylesheets/app/standard/app.css'
             },
+            jsExamples: {
+                src: concatenation.jsExamples.files,
+                dest: 'dist/main/webapp/javascript/app/examples.js'
+            },
             htmlTemplates: {
                 src: concatenation.htmlTemplates.files,
                 dest: 'dist/main/webapp/templates.html'
@@ -90,10 +94,10 @@ module.exports = function (grunt) {
                 'src/main/webapp/javascript/directives/**/*.js',
                 'src/main/webapp/javascript/rest-resources/**/*.js',
                 'src/main/webapp/javascript/utils/**/*.js',
-                'src/main/webapp/javascript/controllers/**/*.js',
+                'src/main/webapp/javascript/examples/**/*.js',
                 'src/test/webapp/javascript/directives/**/*.js',
                 'src/test/webapp/javascript/rest-resources/**/*.js',
-                'src/test/webapp/javascript/controllers/**/*.js',
+                'src/test/webapp/javascript/examples/**/*.js',
                 'src/test/webapp/javascript/utils/**/*.js',
                 'src/main/javascript/**/*.js',
                 'src/test/javascript/**/*.js',
@@ -158,7 +162,8 @@ module.exports = function (grunt) {
                     'dist/main/webapp/javascript/libs/libs.js': '<%= concat.jsLibs.dest %>',
                     'dist/main/webapp/javascript/libs/angular-ie-libs.js': '<%= concat.angularIELibs.dest %>',
                     'dist/main/webapp/javascript/libs/bootstrap-ie-libs.js': '<%= concat.bootstrapIELibs.dest %>',
-                    'dist/main/webapp/javascript/app/app.js': '<%= concat.jsApp.dest %>'
+                    'dist/main/webapp/javascript/app/app.js': '<%= concat.jsApp.dest %>',
+                    'dist/main/webapp/javascript/app/examples.js': '<%= concat.jsExamples.dest %>'
                 }
             }
         },

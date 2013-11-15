@@ -22,14 +22,14 @@ block pageContent
             h3(id="basic-grid")
                 | Basic Grid
 
-            #basic-grid
-                sys-data-grid(grid-title="Test Title", grid-columns="basicGridExampleColumns")
+            div(ng-controller="basicGridExample")
+                sys-data-grid(grid-columns="basicGridExampleColumns", grid-rows="basicGridExampleRows")
 
             h3(id="paging")
                 | Paging
 
-            #paging
-                sys-data-grid(grid-pagination="true")
+            div(ng-controller="pagingGridExample")
+                sys-data-grid(grid-title="Super Heroes", grid-pagination="true", grid-columns="pagingGridExampleColumns", grid-rows="pagingGridExampleRows")
 
             h3(id="grid-cell-editing")
                 | Grid Cell Editing

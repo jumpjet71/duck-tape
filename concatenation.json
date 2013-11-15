@@ -48,7 +48,11 @@
             , "src/main/webapp/javascript/utils/**/*.js"
             , "src/main/webapp/javascript/rest-resources/**/*.js"
             , "src/main/webapp/javascript/directives/**/*.js"
-            , "src/main/webapp/javascript/controllers/**/*.js"
+        ]
+    },
+    "jsExamples": {
+        "files": [
+            "src/main/webapp/javascript/examples/**/*.js"
         ]
     },
     "htmlTemplates": {
