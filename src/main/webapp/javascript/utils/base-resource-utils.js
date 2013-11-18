@@ -24,8 +24,9 @@
              */
             collection: {},
             /**
-             * The collection pagination criteria
-             *
+             * The collection pagination criteria object. This object has
+             * a default implementation that is client bound. Can be overridden
+             * by resource object API call.
              *
              */
             paginationCriteria: {},

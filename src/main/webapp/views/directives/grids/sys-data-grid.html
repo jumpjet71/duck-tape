@@ -36,7 +36,8 @@
                 <tbody>
                     <tr ng-repeat="row in gridRows">
                         <td ng-repeat="column in gridColumns">
-                            {{row[column.dataIndex]}}
+                            <span ng-hide="{{column.renderer}}">{{row[column.dataIndex]}}</span>
+                            <span ng-show="{{column.renderer.run}}">{{column.renderer(row[column.dataIndex])}}</span>
                         </td>
                     </tr>
                 </tbody>

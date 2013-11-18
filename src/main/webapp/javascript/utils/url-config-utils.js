@@ -19,7 +19,7 @@
              */
             rootUrl: "http://localhost:9090/v1",
             /**
-             * The base URL path for the resource
+             * The base URL path for the resource. This is
              */
             path: null,
             /**
