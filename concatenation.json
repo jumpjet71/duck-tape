@@ -3,7 +3,7 @@
         "themes": {
             "standard": {
                 "files": [
-                    "bower_components/bootswatch/custom/bootstrap.css"
+                    "bower_components/bootswatch/spacelab/bootstrap.css"
                     , "bower_components/font-awesome/css/font-awesome.css"
                     , "bower_components/nvd3/src/nv.d3.css"
                 ]
