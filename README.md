@@ -18,7 +18,7 @@ The "glue code" libraries being used:
 * [Bootstrap](http://twitter.github.com/bootstrap/) for client side web developing.
 * [Grunt](http://www.gruntjs.com/) for server and client JS building and tasking.
 * [Bower](http://bower.io/) for web package managing.
-* [Mocha](http://visionmedia.github.io/mocha/) for JS unit testing.
+* [Mocha](http://mochajs.org/) for JS unit testing.
 * [Chai](http://chaijs.com/) for unit test asserting.
 
 ### Requirements
